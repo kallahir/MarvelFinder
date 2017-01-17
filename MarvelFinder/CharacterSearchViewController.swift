@@ -99,9 +99,17 @@ class CharacterSearchViewController: UITableViewController, UISearchBarDelegate 
         }
         
         if indexPath.row == self.result.characters!.count {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterSearchLoadMoreCell", for: indexPath) as! CharacterSearchLoadMoreCell
+            if self.result.characters!.count >= self.result.total! {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterNotFoundCell", for: indexPath)
+                
+                cell.textLabel?.text = "Data provided by Marvel. © 2014 Marvel"
+                
+                return cell
+            }
             
-            cell.loadMoreIndicator.startAnimating()
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterSearchLoadingCell", for: indexPath) as! CharacterSearchLoadingCell
+            
+            cell.loadingIndicator.startAnimating()
             
             return cell
         }
@@ -132,9 +140,9 @@ class CharacterSearchViewController: UITableViewController, UISearchBarDelegate 
                 return 1
             }
             
-            if self.result.characters!.count >= self.result.total! {
-                return (self.result.characters?.count)!
-            }
+//            if self.result.characters!.count >= self.result.total! {
+//                return (self.result.characters?.count)!
+//            }
             
             return (self.result.characters?.count)! + 1
         }

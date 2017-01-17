@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import SwiftHash
-import ObjectMapper
 import AlamofireImage
 
 class CharacterListViewController: UITableViewController {
@@ -35,7 +33,7 @@ class CharacterListViewController: UITableViewController {
             if self.loadErrorFlag {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterListRetryCell", for: indexPath) as! CharacterListRetryCell
                 
-                cell.tryAgainLabel.text = "Tente novamente..."
+                cell.tryAgainLabel.text = "Click here and try again..."
                 
                 return cell
             } else {

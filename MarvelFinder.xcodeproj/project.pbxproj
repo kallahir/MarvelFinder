@@ -29,7 +29,7 @@
 		07A89B0E1E1B39920039F35B /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A89B0D1E1B39920039F35B /* AboutViewController.swift */; };
 		07B07E161E153AB90065B2A5 /* CharacterListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B07E151E153AB90065B2A5 /* CharacterListCell.swift */; };
 		07B3B8C91E21F6FF002B55E1 /* RelatedLinkItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B3B8C81E21F6FF002B55E1 /* RelatedLinkItem.swift */; };
-		07B3B8CB1E2213F5002B55E1 /* CharacterSearchLoadMoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B3B8CA1E2213F5002B55E1 /* CharacterSearchLoadMoreCell.swift */; };
+		07B3B8CB1E2213F5002B55E1 /* CharacterSearchLoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B3B8CA1E2213F5002B55E1 /* CharacterSearchLoadingCell.swift */; };
 		07C733B11E146DF9001EFB81 /* SwiftHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07C733B01E146DF9001EFB81 /* SwiftHash.framework */; };
 		07D3C2551E25B6B200DCC7DB /* CharacterDetailCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D3C2541E25B6B200DCC7DB /* CharacterDetailCollectionCell.swift */; };
 		07D3C2581E25C70400DCC7DB /* CharacterDetailCollectionLoadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D3C2571E25C70400DCC7DB /* CharacterDetailCollectionLoadCell.swift */; };
@@ -91,7 +91,7 @@
 		07A89B0D1E1B39920039F35B /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		07B07E151E153AB90065B2A5 /* CharacterListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterListCell.swift; sourceTree = "<group>"; };
 		07B3B8C81E21F6FF002B55E1 /* RelatedLinkItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelatedLinkItem.swift; sourceTree = "<group>"; };
-		07B3B8CA1E2213F5002B55E1 /* CharacterSearchLoadMoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterSearchLoadMoreCell.swift; sourceTree = "<group>"; };
+		07B3B8CA1E2213F5002B55E1 /* CharacterSearchLoadingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterSearchLoadingCell.swift; sourceTree = "<group>"; };
 		07C733B01E146DF9001EFB81 /* SwiftHash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftHash.framework; path = "../../../Library/Developer/Xcode/DerivedData/MarvelFinder-flgzwqwqlryhmofljmcwfygpmklr/Build/Products/Debug-iphonesimulator/SwiftHash/SwiftHash.framework"; sourceTree = "<group>"; };
 		07D3C2541E25B6B200DCC7DB /* CharacterDetailCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailCollectionCell.swift; sourceTree = "<group>"; };
 		07D3C2571E25C70400DCC7DB /* CharacterDetailCollectionLoadCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailCollectionLoadCell.swift; sourceTree = "<group>"; };
@@ -220,7 +220,7 @@
 			children = (
 				07611F8E1E15E3C6003CCF66 /* CharacterSearchViewController.swift */,
 				07611F911E15E40A003CCF66 /* CharacterSearchCell.swift */,
-				07B3B8CA1E2213F5002B55E1 /* CharacterSearchLoadMoreCell.swift */,
+				07B3B8CA1E2213F5002B55E1 /* CharacterSearchLoadingCell.swift */,
 			);
 			name = CharacterSearch;
 			sourceTree = "<group>";
@@ -610,7 +610,7 @@
 				07B3B8C91E21F6FF002B55E1 /* RelatedLinkItem.swift in Sources */,
 				07B07E161E153AB90065B2A5 /* CharacterListCell.swift in Sources */,
 				07D3C25A1E25C95A00DCC7DB /* CharacterDetailCollectionMessageCell.swift in Sources */,
-				07B3B8CB1E2213F5002B55E1 /* CharacterSearchLoadMoreCell.swift in Sources */,
+				07B3B8CB1E2213F5002B55E1 /* CharacterSearchLoadingCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

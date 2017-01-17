@@ -606,7 +606,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                             <tableViewSection headerTitle="Description" id="bzv-KV-Ws6">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="100" id="M5L-1s-DMD">
-                                        <rect key="frame" x="0.0" y="256" width="375" height="100"/>
+                                        <rect key="frame" x="0.0" y="255.5" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="M5L-1s-DMD" id="hwn-Vi-D9l">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
@@ -633,7 +633,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                             <tableViewSection headerTitle="Comics" id="yuT-fy-6m4">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="220" id="ru8-78-cqN">
-                                        <rect key="frame" x="0.0" y="413" width="375" height="220"/>
+                                        <rect key="frame" x="0.0" y="411.5" width="375" height="220"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ru8-78-cqN" id="Qlc-kr-mA2">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="219"/>
@@ -750,7 +750,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                             <tableViewSection headerTitle="Related Links" id="aoP-tq-F8b">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" textLabel="5Nd-jp-fPE" style="IBUITableViewCellStyleDefault" id="CNC-aK-gPr">
-                                        <rect key="frame" x="0.0" y="690" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="687.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CNC-aK-gPr" id="GhS-Vl-HIk">
                                             <rect key="frame" x="0.0" y="0.0" width="328" height="43"/>
@@ -767,7 +767,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" textLabel="ci7-7I-V7Z" style="IBUITableViewCellStyleDefault" id="oNe-5S-S5f">
-                                        <rect key="frame" x="0.0" y="734" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="731.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oNe-5S-S5f" id="lgL-1f-PIf">
                                             <rect key="frame" x="0.0" y="0.0" width="328" height="43"/>
@@ -784,7 +784,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" textLabel="aNL-fr-pRT" style="IBUITableViewCellStyleDefault" id="VVC-XI-utg">
-                                        <rect key="frame" x="0.0" y="778" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="775.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VVC-XI-utg" id="lPq-zH-029">
                                             <rect key="frame" x="0.0" y="0.0" width="328" height="43"/>
@@ -865,15 +865,15 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                     <outlet property="characterName" destination="scj-xc-ZJc" id="vV1-MV-Zq7"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CharacterNotFoundCell" textLabel="s3H-p2-b06" rowHeight="88" style="IBUITableViewCellStyleDefault" id="sUG-JU-EI7" customClass="CharacterSearchCell" customModule="MarvelFinder" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="116" width="375" height="88"/>
+                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CharacterNotFoundCell" textLabel="s3H-p2-b06" style="IBUITableViewCellStyleDefault" id="sUG-JU-EI7" customClass="CharacterSearchCell" customModule="MarvelFinder" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="116" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sUG-JU-EI7" id="qbE-in-iWP">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="87"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="s3H-p2-b06">
-                                            <rect key="frame" x="15" y="0.0" width="345" height="87"/>
+                                            <rect key="frame" x="15" y="0.0" width="345" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -882,25 +882,34 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CharacterSearchLoadMoreCell" rowHeight="88" id="4QL-Cs-eHE" customClass="CharacterSearchLoadMoreCell" customModule="MarvelFinder" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="204" width="375" height="88"/>
+                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CharacterSearchLoadingCell" rowHeight="88" id="4QL-Cs-eHE" customClass="CharacterSearchLoadingCell" customModule="MarvelFinder" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="160" width="375" height="88"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4QL-Cs-eHE" id="FTr-6A-Bc9">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="87"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="UPf-nT-P8Z">
-                                            <rect key="frame" x="169" y="25" width="37" height="37"/>
+                                            <rect key="frame" x="169" y="8" width="37" height="37"/>
                                             <color key="color" red="0.094117647060000004" green="0.51764705879999995" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </activityIndicatorView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data provided by Marvel. © 2014 Marvel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6a-de-ME8">
+                                            <rect key="frame" x="8" y="53" width="359" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="UPf-nT-P8Z" firstAttribute="centerY" secondItem="FTr-6A-Bc9" secondAttribute="centerY" id="OFs-cQ-KmE"/>
-                                        <constraint firstItem="UPf-nT-P8Z" firstAttribute="centerX" secondItem="FTr-6A-Bc9" secondAttribute="centerX" id="b89-ZH-X4v"/>
+                                        <constraint firstItem="W6a-de-ME8" firstAttribute="top" secondItem="UPf-nT-P8Z" secondAttribute="bottom" constant="8" symbolic="YES" id="2u3-wP-wwE"/>
+                                        <constraint firstItem="W6a-de-ME8" firstAttribute="leading" secondItem="FTr-6A-Bc9" secondAttribute="leadingMargin" id="CnB-T7-5Nn"/>
+                                        <constraint firstItem="UPf-nT-P8Z" firstAttribute="centerX" secondItem="W6a-de-ME8" secondAttribute="centerX" id="dTl-w4-uwo"/>
+                                        <constraint firstItem="W6a-de-ME8" firstAttribute="trailing" secondItem="FTr-6A-Bc9" secondAttribute="trailingMargin" id="fok-Hz-W8c"/>
+                                        <constraint firstItem="UPf-nT-P8Z" firstAttribute="top" secondItem="FTr-6A-Bc9" secondAttribute="topMargin" id="xLs-um-CGO"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="loadMoreIndicator" destination="UPf-nT-P8Z" id="ktC-t8-S55"/>
+                                    <outlet property="loadingIndicator" destination="UPf-nT-P8Z" id="UPL-m5-hND"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -953,6 +962,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         <image name="sync" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="QiK-Sl-h5m"/>
+        <segue reference="j9y-IN-wPb"/>
     </inferredMetricsTieBreakers>
 </document>

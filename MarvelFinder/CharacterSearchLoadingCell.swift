@@ -8,8 +8,8 @@
 
 import UIKit
 
-class CharacterSearchLoadMoreCell: UITableViewCell {
+class CharacterSearchLoadingCell: UITableViewCell {
     
-    @IBOutlet weak var loadMoreIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
 }
