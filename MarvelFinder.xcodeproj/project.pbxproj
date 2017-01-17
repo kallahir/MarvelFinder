@@ -32,7 +32,7 @@
 		07B3B8CB1E2213F5002B55E1 /* CharacterSearchLoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B3B8CA1E2213F5002B55E1 /* CharacterSearchLoadingCell.swift */; };
 		07C733B11E146DF9001EFB81 /* SwiftHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07C733B01E146DF9001EFB81 /* SwiftHash.framework */; };
 		07D3C2551E25B6B200DCC7DB /* CharacterDetailCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D3C2541E25B6B200DCC7DB /* CharacterDetailCollectionCell.swift */; };
-		07D3C2581E25C70400DCC7DB /* CharacterDetailCollectionLoadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D3C2571E25C70400DCC7DB /* CharacterDetailCollectionLoadCell.swift */; };
+		07D3C2581E25C70400DCC7DB /* CharacterDetailCollectionLoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D3C2571E25C70400DCC7DB /* CharacterDetailCollectionLoadingCell.swift */; };
 		07D3C25A1E25C95A00DCC7DB /* CharacterDetailCollectionMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D3C2591E25C95A00DCC7DB /* CharacterDetailCollectionMessageCell.swift */; };
 		07FCACFB1E14A6290037C717 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07FCACF91E14A6290037C717 /* Alamofire.framework */; };
 		07FCACFC1E14A6290037C717 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07FCACFA1E14A6290037C717 /* AlamofireImage.framework */; };
@@ -94,7 +94,7 @@
 		07B3B8CA1E2213F5002B55E1 /* CharacterSearchLoadingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterSearchLoadingCell.swift; sourceTree = "<group>"; };
 		07C733B01E146DF9001EFB81 /* SwiftHash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftHash.framework; path = "../../../Library/Developer/Xcode/DerivedData/MarvelFinder-flgzwqwqlryhmofljmcwfygpmklr/Build/Products/Debug-iphonesimulator/SwiftHash/SwiftHash.framework"; sourceTree = "<group>"; };
 		07D3C2541E25B6B200DCC7DB /* CharacterDetailCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailCollectionCell.swift; sourceTree = "<group>"; };
-		07D3C2571E25C70400DCC7DB /* CharacterDetailCollectionLoadCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailCollectionLoadCell.swift; sourceTree = "<group>"; };
+		07D3C2571E25C70400DCC7DB /* CharacterDetailCollectionLoadingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailCollectionLoadingCell.swift; sourceTree = "<group>"; };
 		07D3C2591E25C95A00DCC7DB /* CharacterDetailCollectionMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailCollectionMessageCell.swift; sourceTree = "<group>"; };
 		07FCACF91E14A6290037C717 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/MarvelFinder-flgzwqwqlryhmofljmcwfygpmklr/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		07FCACFA1E14A6290037C717 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = "../../../Library/Developer/Xcode/DerivedData/MarvelFinder-flgzwqwqlryhmofljmcwfygpmklr/Build/Products/Debug-iphonesimulator/AlamofireImage/AlamofireImage.framework"; sourceTree = "<group>"; };
@@ -270,7 +270,7 @@
 			children = (
 				07FE42501E21E5F200A64BD2 /* CharacterDetailViewController.swift */,
 				07D3C2541E25B6B200DCC7DB /* CharacterDetailCollectionCell.swift */,
-				07D3C2571E25C70400DCC7DB /* CharacterDetailCollectionLoadCell.swift */,
+				07D3C2571E25C70400DCC7DB /* CharacterDetailCollectionLoadingCell.swift */,
 				07D3C2591E25C95A00DCC7DB /* CharacterDetailCollectionMessageCell.swift */,
 			);
 			name = CharacterDetail;
@@ -604,7 +604,7 @@
 				07FE42511E21E5F200A64BD2 /* CharacterDetailViewController.swift in Sources */,
 				07611F4A1E1568C7003CCF66 /* Collection.swift in Sources */,
 				0704FAFD1E2D9D6000B3E4E4 /* CharacterListLoadingCell.swift in Sources */,
-				07D3C2581E25C70400DCC7DB /* CharacterDetailCollectionLoadCell.swift in Sources */,
+				07D3C2581E25C70400DCC7DB /* CharacterDetailCollectionLoadingCell.swift in Sources */,
 				079C04591E14A06F000A63E6 /* Character.swift in Sources */,
 				075F838F1E19E815001B756F /* ColorExtension.swift in Sources */,
 				07B3B8C91E21F6FF002B55E1 /* RelatedLinkItem.swift in Sources */,

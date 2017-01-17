@@ -78,7 +78,7 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
         if self.comicsCollection != nil {
             if collectionView == self.comicsCollectionView {
                 if self.comicsCollection.items!.count == indexPath.row {
-                    let cell = self.comicsCollectionView.dequeueReusableCell(withReuseIdentifier: "CollectionLoadCell", for: indexPath) as! CharacterDetailCollectionLoadCell
+                    let cell = self.comicsCollectionView.dequeueReusableCell(withReuseIdentifier: "CollectionLoadCell", for: indexPath) as! CharacterDetailCollectionLoadingCell
                     
                     cell.loadingIndicator.startAnimating()
                     
@@ -104,7 +104,7 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
             }
         }
         
-        let cell = self.comicsCollectionView.dequeueReusableCell(withReuseIdentifier: "CollectionLoadCell", for: indexPath) as! CharacterDetailCollectionLoadCell
+        let cell = self.comicsCollectionView.dequeueReusableCell(withReuseIdentifier: "CollectionLoadCell", for: indexPath) as! CharacterDetailCollectionLoadingCell
         
         cell.loadingIndicator.startAnimating()
         

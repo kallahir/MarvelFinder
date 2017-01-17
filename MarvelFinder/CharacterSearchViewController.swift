@@ -15,8 +15,8 @@ class CharacterSearchViewController: UITableViewController, UISearchBarDelegate 
     let requests = MarvelRequests()
     
     let searchController = UISearchController(searchResultsController: nil)
-    var searchText = ""
     var searchingIndicator: UIActivityIndicatorView!
+    var searchText = ""
     
     var offset = 0
     var result: SearchResult!
@@ -139,10 +139,6 @@ class CharacterSearchViewController: UITableViewController, UISearchBarDelegate 
             if self.result.count == 0 {
                 return 1
             }
-            
-//            if self.result.characters!.count >= self.result.total! {
-//                return (self.result.characters?.count)!
-//            }
             
             return (self.result.characters?.count)! + 1
         }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CharacterDetailCollectionLoadCell: UICollectionViewCell {
+class CharacterDetailCollectionLoadingCell: UICollectionViewCell {
     
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     

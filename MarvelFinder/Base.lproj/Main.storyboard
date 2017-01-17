@@ -684,15 +684,15 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                                 <outlet property="collectionName" destination="YtB-fm-UY3" id="LA4-Vg-faO"/>
                                                             </connections>
                                                         </collectionViewCell>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionLoadCell" id="jTi-LA-9xK" customClass="CharacterDetailCollectionLoadCell" customModule="MarvelFinder" customModuleProvider="target">
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionLoadCell" id="jTi-LA-9xK" customClass="CharacterDetailCollectionLoadingCell" customModule="MarvelFinder" customModuleProvider="target">
                                                             <rect key="frame" x="120" y="6" width="110" height="192"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="110" height="192"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="B3O-30-dGo">
-                                                                        <rect key="frame" x="45" y="86" width="20" height="20"/>
+                                                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="B3O-30-dGo">
+                                                                        <rect key="frame" x="37" y="78" width="37" height="37"/>
                                                                         <color key="color" red="0.094117647060000004" green="0.51764705879999995" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </activityIndicatorView>
                                                                 </subviews>
