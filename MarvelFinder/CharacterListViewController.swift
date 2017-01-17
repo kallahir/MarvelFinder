@@ -18,28 +18,35 @@ class CharacterListViewController: UITableViewController {
     var offset = 0
     var result: SearchResult!
     
-    @IBOutlet weak var topView: UIView!
-    var loadingIndicator: UIActivityIndicatorView!
-    
     var loadMoreFlag = false
+    var loadErrorFlag = false
     
     var selectedCharacter: Character!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.requests.getCharacterList(offset: self.offset) { (result) in
-            self.result = result
-            
-            DispatchQueue.main.sync {
-                self.tableView.reloadData()
-                self.loadMoreFlag = true
-            }
-        }
+        self.loadCharacterList(offset: self.offset)
     }
     
     // MARK: TableView
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if self.result == nil || indexPath.row == self.result?.characters?.count {
+            if self.loadErrorFlag {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterListRetryCell", for: indexPath) as! CharacterListRetryCell
+                
+                cell.tryAgainLabel.text = "Tente novamente..."
+                
+                return cell
+            } else {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterListLoadingCell", for: indexPath) as! CharacterListLoadingCell
+                
+                cell.loadingIndicator.startAnimating()
+                
+                return cell
+            }
+        }
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterListCell", for: indexPath) as! CharacterListCell
         
         let urlString = "\(self.result.characters![indexPath.row].thumbnail!)/landscape_xlarge.\(self.result.characters![indexPath.row].thumbFormat!)"
@@ -51,18 +58,32 @@ class CharacterListViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if self.result == nil || indexPath.row == self.result?.characters?.count {
+            return 88
+        }
+        
         return 185
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if self.result != nil {
-            return (self.result.characters?.count)!
+            return (self.result.characters?.count)! + 1
         }
         
-        return 0
+        return 1
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if self.result == nil || indexPath.row == self.result?.characters?.count {
+            if self.loadErrorFlag {
+                self.loadErrorFlag = false
+                self.tableView.reloadData()
+                self.loadCharacterList(offset: self.offset)
+                return
+            }
+            return
+        }
+        
         self.selectedCharacter = self.result.characters![indexPath.row]
         self.performSegue(withIdentifier: "DetailFromList", sender: self)
     }
@@ -91,27 +112,44 @@ class CharacterListViewController: UITableViewController {
     func loadMore(){
         if self.loadMoreFlag == true {
             self.loadMoreFlag = false
-            self.offset += 20
+            let offset = self.offset + 20
             
             if self.result != nil {
-                if self.offset >= self.result.total! {
-                    self.tableView.tableFooterView = nil
+                if offset >= self.result.total! {
                     return
                 }
             }
             
-            self.requests.getCharacterList(offset: self.offset) { (result) in
+            self.loadCharacterList(offset: offset)
+        }
+    }
+    
+    func loadCharacterList(offset: Int) {
+        self.requests.getCharacterList(offset: offset) { (result) in
+            guard let result = result else {
+                self.refreshTable(loadMore: false, loadError: true, offset: offset)
+                return
+            }
+            
+            if self.result == nil {
+                self.result = result
+            } else {
                 for character in (result.characters)! {
                     self.result.characters?.append(character)
                 }
-                
-                DispatchQueue.main.sync {
-                    self.tableView.reloadData()
-                    self.loadMoreFlag = true
-                }
             }
+            
+            self.refreshTable(loadMore: true, loadError: false, offset: offset)
         }
-        
+    }
+    
+    func refreshTable(loadMore: Bool, loadError: Bool, offset: Int) {
+        DispatchQueue.main.sync {
+            self.offset = offset
+            self.loadMoreFlag = loadMore
+            self.loadErrorFlag = loadError
+            self.tableView.reloadData()
+        }
     }
     
 }

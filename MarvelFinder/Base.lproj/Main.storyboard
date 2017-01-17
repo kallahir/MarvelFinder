@@ -412,21 +412,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <view key="tableFooterView" contentMode="scaleToFill" id="q1l-O9-EsE">
-                            <rect key="frame" x="0.0" y="213" width="375" height="66"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="dSq-uD-Yr6">
-                                    <rect key="frame" x="169" y="15" width="37" height="37"/>
-                                    <color key="color" red="0.094117647060000004" green="0.51764705879999995" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </activityIndicatorView>
-                            </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstItem="dSq-uD-Yr6" firstAttribute="centerX" secondItem="q1l-O9-EsE" secondAttribute="centerX" id="qQg-Cg-oFt"/>
-                                <constraint firstItem="dSq-uD-Yr6" firstAttribute="centerY" secondItem="q1l-O9-EsE" secondAttribute="centerY" id="yK8-dY-VUN"/>
-                            </constraints>
-                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CharacterListCell" rowHeight="185" id="xq5-aY-SZF" customClass="CharacterListCell" customModule="MarvelFinder" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="185"/>
@@ -470,6 +455,72 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                 <connections>
                                     <outlet property="characterImage" destination="0TT-nO-ZKT" id="Ptg-kX-DzF"/>
                                     <outlet property="characterName" destination="ZU5-sw-9Ae" id="SPJ-Ym-3Y5"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CharacterListLoadingCell" rowHeight="88" id="iCh-Xz-GNe" customClass="CharacterListLoadingCell" customModule="MarvelFinder" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="213" width="375" height="88"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iCh-Xz-GNe" id="kWX-zm-MIb">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="dSq-uD-Yr6">
+                                            <rect key="frame" x="169" y="8" width="37" height="37"/>
+                                            <color key="color" red="0.094117647060000004" green="0.51764705879999995" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </activityIndicatorView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data provided by Marvel. © 2014 Marvel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xHe-LK-d9X">
+                                            <rect key="frame" x="8" y="53" width="359" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="dSq-uD-Yr6" firstAttribute="top" secondItem="kWX-zm-MIb" secondAttribute="topMargin" id="4ba-gP-cBd"/>
+                                        <constraint firstItem="xHe-LK-d9X" firstAttribute="leading" secondItem="kWX-zm-MIb" secondAttribute="leadingMargin" id="7H5-U5-lQb"/>
+                                        <constraint firstItem="xHe-LK-d9X" firstAttribute="top" secondItem="dSq-uD-Yr6" secondAttribute="bottom" constant="8" symbolic="YES" id="Aot-5X-dWX"/>
+                                        <constraint firstItem="xHe-LK-d9X" firstAttribute="trailing" secondItem="kWX-zm-MIb" secondAttribute="trailingMargin" id="Dhb-z2-mCB"/>
+                                        <constraint firstItem="dSq-uD-Yr6" firstAttribute="centerX" secondItem="xHe-LK-d9X" secondAttribute="centerX" id="wcK-nd-yoC"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="loadingIndicator" destination="dSq-uD-Yr6" id="eP1-bx-hcL"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CharacterListRetryCell" rowHeight="88" id="ypf-u8-goC" customClass="CharacterListRetryCell" customModule="MarvelFinder" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="301" width="375" height="88"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ypf-u8-goC" id="UPD-LS-II4">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sync" translatesAutoresizingMaskIntoConstraints="NO" id="1Mx-CX-Ell">
+                                            <rect key="frame" x="169" y="8" width="37" height="37"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="37" id="Ypd-ye-U4I"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try again..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1J-wh-oS8">
+                                            <rect key="frame" x="8" y="53" width="359" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="SY4-Tz-gm8"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="u1J-wh-oS8" firstAttribute="leading" secondItem="UPD-LS-II4" secondAttribute="leadingMargin" id="3xp-O6-2LJ"/>
+                                        <constraint firstItem="u1J-wh-oS8" firstAttribute="trailing" secondItem="UPD-LS-II4" secondAttribute="trailingMargin" id="OYU-rx-0pq"/>
+                                        <constraint firstItem="u1J-wh-oS8" firstAttribute="top" secondItem="1Mx-CX-Ell" secondAttribute="bottom" constant="8" symbolic="YES" id="SrV-AV-nXb"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="u1J-wh-oS8" secondAttribute="bottom" constant="6" id="WE3-Ob-abL"/>
+                                        <constraint firstItem="1Mx-CX-Ell" firstAttribute="centerX" secondItem="u1J-wh-oS8" secondAttribute="centerX" id="XLs-NZ-ZV0"/>
+                                        <constraint firstItem="1Mx-CX-Ell" firstAttribute="top" secondItem="UPD-LS-II4" secondAttribute="topMargin" id="XZd-iw-Mu6"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="tryAgainLabel" destination="u1J-wh-oS8" id="iQi-r7-1LO"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -899,8 +950,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         <image name="placeholder_list" width="375" height="180"/>
         <image name="placeholder_search" width="54" height="71"/>
         <image name="search" width="25" height="25"/>
+        <image name="sync" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="j9y-IN-wPb"/>
+        <segue reference="QiK-Sl-h5m"/>
     </inferredMetricsTieBreakers>
 </document>

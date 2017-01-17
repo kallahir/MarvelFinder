@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0704FAFD1E2D9D6000B3E4E4 /* CharacterListLoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0704FAFC1E2D9D6000B3E4E4 /* CharacterListLoadingCell.swift */; };
+		0704FAFF1E2D9D6F00B3E4E4 /* CharacterListRetryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0704FAFE1E2D9D6F00B3E4E4 /* CharacterListRetryCell.swift */; };
 		071BC45A1E1355570020D074 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071BC4591E1355570020D074 /* AppDelegate.swift */; };
 		071BC45C1E1355570020D074 /* CharacterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071BC45B1E1355570020D074 /* CharacterListViewController.swift */; };
 		071BC45F1E1355570020D074 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 071BC45D1E1355570020D074 /* Main.storyboard */; };
@@ -61,6 +63,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0704FAFC1E2D9D6000B3E4E4 /* CharacterListLoadingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterListLoadingCell.swift; sourceTree = "<group>"; };
+		0704FAFE1E2D9D6F00B3E4E4 /* CharacterListRetryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterListRetryCell.swift; sourceTree = "<group>"; };
 		071BC4561E1355570020D074 /* MarvelFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		071BC4591E1355570020D074 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		071BC45B1E1355570020D074 /* CharacterListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewController.swift; sourceTree = "<group>"; };
@@ -247,6 +251,8 @@
 			children = (
 				071BC45B1E1355570020D074 /* CharacterListViewController.swift */,
 				07B07E151E153AB90065B2A5 /* CharacterListCell.swift */,
+				0704FAFC1E2D9D6000B3E4E4 /* CharacterListLoadingCell.swift */,
+				0704FAFE1E2D9D6F00B3E4E4 /* CharacterListRetryCell.swift */,
 			);
 			name = CharacterList;
 			sourceTree = "<group>";
@@ -591,11 +597,13 @@
 				07FE42491E2073CD00A64BD2 /* MarvelRequests.swift in Sources */,
 				071BC45C1E1355570020D074 /* CharacterListViewController.swift in Sources */,
 				079C04571E149DC8000A63E6 /* SearchResult.swift in Sources */,
+				0704FAFF1E2D9D6F00B3E4E4 /* CharacterListRetryCell.swift in Sources */,
 				07A89B0E1E1B39920039F35B /* AboutViewController.swift in Sources */,
 				07FE422A1E1F367A00A64BD2 /* LicenseViewController.swift in Sources */,
 				071BC45A1E1355570020D074 /* AppDelegate.swift in Sources */,
 				07FE42511E21E5F200A64BD2 /* CharacterDetailViewController.swift in Sources */,
 				07611F4A1E1568C7003CCF66 /* Collection.swift in Sources */,
+				0704FAFD1E2D9D6000B3E4E4 /* CharacterListLoadingCell.swift in Sources */,
 				07D3C2581E25C70400DCC7DB /* CharacterDetailCollectionLoadCell.swift in Sources */,
 				079C04591E14A06F000A63E6 /* Character.swift in Sources */,
 				075F838F1E19E815001B756F /* ColorExtension.swift in Sources */,
