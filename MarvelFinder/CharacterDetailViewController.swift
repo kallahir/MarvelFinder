@@ -27,6 +27,8 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
     @IBOutlet weak var eventsCollectionView: UICollectionView!
     
     var urls = Dictionary<String, String>()
+    // TODO: don't forget to update it!
+    private let relatedLinksSection = 2
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,21 +76,20 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         if self.comicsCollection != nil {
             if collectionView == self.comicsCollectionView {
-                if self.comicsCollection.items!.count == indexPath.row {
-                    let cell = self.comicsCollectionView.dequeueReusableCell(withReuseIdentifier: "CollectionLoadCell", for: indexPath) as! CharacterDetailCollectionLoadingCell
-                    
-                    cell.loadingIndicator.startAnimating()
-                    
-                    return cell
-                }
-                
                 if self.comicsCollection.items!.count == 0 {
                     let cell = self.comicsCollectionView.dequeueReusableCell(withReuseIdentifier: "CollectionMessageCell", for: indexPath) as! CharacterDetailCollectionMessageCell
                     
                     cell.messageLabel.text = "No records found."
+                    
+                    return cell
+                }
+
+                if self.comicsCollection.items!.count == indexPath.row {
+                    let cell = self.comicsCollectionView.dequeueReusableCell(withReuseIdentifier: "CollectionLoadCell", for: indexPath) as! CharacterDetailCollectionLoadingCell
+                    
+                    cell.loadingIndicator.startAnimating()
                     
                     return cell
                 }
@@ -122,40 +123,11 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.tableView.deselectRow(at: indexPath, animated: true)
-        
-        if indexPath.section == 5 {
-            switch indexPath.row {
-            case 0:
-                self.openRelatedLink(linkType: "detail")
-                break
-            case 1:
-                self.openRelatedLink(linkType: "wiki")
-                break
-            case 2:
-                self.openRelatedLink(linkType: "comiclink")
-                break
-            default:
-                print("ERRO")
-            }
-        }
+        self.selectRelatedLink(indexPath: indexPath)
     }
     
     override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
-        if indexPath.section == 5 {
-            switch indexPath.row {
-            case 0:
-                self.openRelatedLink(linkType: "detail")
-                break
-            case 1:
-                self.openRelatedLink(linkType: "wiki")
-                break
-            case 2:
-                self.openRelatedLink(linkType: "comiclink")
-                break
-            default:
-                print("ERRO")
-            }
-        }
+        self.selectRelatedLink(indexPath: indexPath)
     }
     
     // MARK: Load More
@@ -186,6 +158,10 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
             }
             
             self.requests.getCollectionList(characterId: self.character.id!, collectionType: "comics", offset: self.comicsOffset, completion: { (result) in
+                guard let result = result else {
+                    return
+                }
+                
                 for item in result.items! {
                     self.comicsCollection.items!.append(item)
                 }
@@ -199,8 +175,26 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
     }
     
     // MARK: Util
+    func selectRelatedLink(indexPath: IndexPath) {
+        if indexPath.section == self.relatedLinksSection {
+            switch indexPath.row {
+            case 0:
+                self.openRelatedLink(linkType: "detail")
+                break
+            case 1:
+                self.openRelatedLink(linkType: "wiki")
+                break
+            case 2:
+                self.openRelatedLink(linkType: "comiclink")
+                break
+            default:
+                break
+            }
+        }
+    }
+    
     func openRelatedLink(linkType: String) {
-        if let relatedLink = urls[linkType] {
+        if let relatedLink = self.urls[linkType] {
             UIApplication.shared.open(NSURL(string: relatedLink) as! URL, options: [:], completionHandler: nil)
         } else {
             UIApplication.shared.open(NSURL(string:"http://www.marvel.com/") as! URL, options: [:], completionHandler: nil)
