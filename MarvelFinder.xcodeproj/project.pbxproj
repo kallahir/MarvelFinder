@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0704FAFD1E2D9D6000B3E4E4 /* CharacterListLoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0704FAFC1E2D9D6000B3E4E4 /* CharacterListLoadingCell.swift */; };
 		0704FAFF1E2D9D6F00B3E4E4 /* CharacterListRetryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0704FAFE1E2D9D6F00B3E4E4 /* CharacterListRetryCell.swift */; };
+		0704FB021E2DC8D000B3E4E4 /* CharacterSearchRetryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0704FB011E2DC8D000B3E4E4 /* CharacterSearchRetryCell.swift */; };
 		071BC45A1E1355570020D074 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071BC4591E1355570020D074 /* AppDelegate.swift */; };
 		071BC45C1E1355570020D074 /* CharacterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071BC45B1E1355570020D074 /* CharacterListViewController.swift */; };
 		071BC45F1E1355570020D074 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 071BC45D1E1355570020D074 /* Main.storyboard */; };
@@ -65,6 +66,7 @@
 /* Begin PBXFileReference section */
 		0704FAFC1E2D9D6000B3E4E4 /* CharacterListLoadingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterListLoadingCell.swift; sourceTree = "<group>"; };
 		0704FAFE1E2D9D6F00B3E4E4 /* CharacterListRetryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterListRetryCell.swift; sourceTree = "<group>"; };
+		0704FB011E2DC8D000B3E4E4 /* CharacterSearchRetryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterSearchRetryCell.swift; sourceTree = "<group>"; };
 		071BC4561E1355570020D074 /* MarvelFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		071BC4591E1355570020D074 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		071BC45B1E1355570020D074 /* CharacterListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewController.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 				07611F8E1E15E3C6003CCF66 /* CharacterSearchViewController.swift */,
 				07611F911E15E40A003CCF66 /* CharacterSearchCell.swift */,
 				07B3B8CA1E2213F5002B55E1 /* CharacterSearchLoadingCell.swift */,
+				0704FB011E2DC8D000B3E4E4 /* CharacterSearchRetryCell.swift */,
 			);
 			name = CharacterSearch;
 			sourceTree = "<group>";
@@ -609,6 +612,7 @@
 				075F838F1E19E815001B756F /* ColorExtension.swift in Sources */,
 				07B3B8C91E21F6FF002B55E1 /* RelatedLinkItem.swift in Sources */,
 				07B07E161E153AB90065B2A5 /* CharacterListCell.swift in Sources */,
+				0704FB021E2DC8D000B3E4E4 /* CharacterSearchRetryCell.swift in Sources */,
 				07D3C25A1E25C95A00DCC7DB /* CharacterDetailCollectionMessageCell.swift in Sources */,
 				07B3B8CB1E2213F5002B55E1 /* CharacterSearchLoadingCell.swift in Sources */,
 			);

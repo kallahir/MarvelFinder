@@ -113,7 +113,7 @@ class CharacterListViewController: UITableViewController {
             let offset = self.offset + 20
             
             if self.result != nil {
-                if offset >= self.result.total! {
+                if offset > self.result.total! {
                     return
                 }
             }
@@ -122,6 +122,7 @@ class CharacterListViewController: UITableViewController {
         }
     }
     
+    // MARK: Util
     func loadCharacterList(offset: Int) {
         self.requests.getCharacterList(offset: offset) { (result) in
             guard let result = result else {
