@@ -10,6 +10,7 @@
 		0704FAFD1E2D9D6000B3E4E4 /* CharacterListLoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0704FAFC1E2D9D6000B3E4E4 /* CharacterListLoadingCell.swift */; };
 		0704FAFF1E2D9D6F00B3E4E4 /* CharacterListRetryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0704FAFE1E2D9D6F00B3E4E4 /* CharacterListRetryCell.swift */; };
 		0704FB021E2DC8D000B3E4E4 /* CharacterSearchRetryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0704FB011E2DC8D000B3E4E4 /* CharacterSearchRetryCell.swift */; };
+		0704FB041E2F014300B3E4E4 /* CharacterDetailCollectionRetryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0704FB031E2F014300B3E4E4 /* CharacterDetailCollectionRetryCell.swift */; };
 		071BC45A1E1355570020D074 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071BC4591E1355570020D074 /* AppDelegate.swift */; };
 		071BC45C1E1355570020D074 /* CharacterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071BC45B1E1355570020D074 /* CharacterListViewController.swift */; };
 		071BC45F1E1355570020D074 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 071BC45D1E1355570020D074 /* Main.storyboard */; };
@@ -67,6 +68,7 @@
 		0704FAFC1E2D9D6000B3E4E4 /* CharacterListLoadingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterListLoadingCell.swift; sourceTree = "<group>"; };
 		0704FAFE1E2D9D6F00B3E4E4 /* CharacterListRetryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterListRetryCell.swift; sourceTree = "<group>"; };
 		0704FB011E2DC8D000B3E4E4 /* CharacterSearchRetryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterSearchRetryCell.swift; sourceTree = "<group>"; };
+		0704FB031E2F014300B3E4E4 /* CharacterDetailCollectionRetryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailCollectionRetryCell.swift; sourceTree = "<group>"; };
 		071BC4561E1355570020D074 /* MarvelFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		071BC4591E1355570020D074 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		071BC45B1E1355570020D074 /* CharacterListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewController.swift; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 				07D3C2541E25B6B200DCC7DB /* CharacterDetailCollectionCell.swift */,
 				07D3C2571E25C70400DCC7DB /* CharacterDetailCollectionLoadingCell.swift */,
 				07D3C2591E25C95A00DCC7DB /* CharacterDetailCollectionMessageCell.swift */,
+				0704FB031E2F014300B3E4E4 /* CharacterDetailCollectionRetryCell.swift */,
 			);
 			name = CharacterDetail;
 			sourceTree = "<group>";
@@ -597,6 +600,7 @@
 				07D3C2551E25B6B200DCC7DB /* CharacterDetailCollectionCell.swift in Sources */,
 				075F838D1E19E809001B756F /* StringExtension.swift in Sources */,
 				07611F4C1E1568DB003CCF66 /* CollectionItem.swift in Sources */,
+				0704FB041E2F014300B3E4E4 /* CharacterDetailCollectionRetryCell.swift in Sources */,
 				07FE42491E2073CD00A64BD2 /* MarvelRequests.swift in Sources */,
 				071BC45C1E1355570020D074 /* CharacterListViewController.swift in Sources */,
 				079C04571E149DC8000A63E6 /* SearchResult.swift in Sources */,

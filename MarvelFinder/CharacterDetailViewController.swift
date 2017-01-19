@@ -22,6 +22,7 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
     var comicsCollection: Collection!
     var comicsOffset   = 0
     var comicsLoadMore = false
+    var comicsLoadError = false
     @IBOutlet weak var seriesCollectionView: UICollectionView!
     @IBOutlet weak var storiesCollectionView: UICollectionView!
     @IBOutlet weak var eventsCollectionView: UICollectionView!
@@ -61,10 +62,20 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
 //        self.eventsCollectionView.dataSource = self
         
         self.requests.getCollectionList(characterId: self.character.id!, collectionType: "comics", offset: self.comicsOffset, completion: { (result) in
+            guard let result = result else {
+                DispatchQueue.main.sync {
+                    self.comicsLoadMore = false
+                    self.comicsLoadError = true
+                    self.comicsCollectionView.reloadData()
+                }
+                return
+            }
+            
             self.comicsCollection = result
             
             DispatchQueue.main.sync {
                 self.comicsLoadMore = true
+                self.comicsLoadError = false
                 self.comicsCollectionView.reloadData()
             }
         })
@@ -76,8 +87,8 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if self.comicsCollection != nil {
-            if collectionView == self.comicsCollectionView {
+        if collectionView == self.comicsCollectionView {
+            if self.comicsCollection != nil {
                 if self.comicsCollection.items!.count == 0 {
                     let cell = self.comicsCollectionView.dequeueReusableCell(withReuseIdentifier: "CollectionMessageCell", for: indexPath) as! CharacterDetailCollectionMessageCell
                     
@@ -87,6 +98,14 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
                 }
 
                 if self.comicsCollection.items!.count == indexPath.row {
+                    if self.comicsLoadError {
+                        let cell = self.comicsCollectionView.dequeueReusableCell(withReuseIdentifier: "CollectionRetryCell", for: indexPath) as! CharacterDetailCollectionRetryCell
+                        
+                        cell.retryLabel.text = "Try again..."
+                        
+                        return cell
+                    }
+                    
                     let cell = self.comicsCollectionView.dequeueReusableCell(withReuseIdentifier: "CollectionLoadCell", for: indexPath) as! CharacterDetailCollectionLoadingCell
                     
                     cell.loadingIndicator.startAnimating()
@@ -103,6 +122,18 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
                 
                 return cell
             }
+            
+            if self.comicsCollection == nil {
+                if collectionView == self.comicsCollectionView {
+                    if self.comicsLoadError {
+                        let cell = self.comicsCollectionView.dequeueReusableCell(withReuseIdentifier: "CollectionRetryCell", for: indexPath) as! CharacterDetailCollectionRetryCell
+                        
+                        cell.retryLabel.text = "Try again..."
+                        
+                        return cell
+                    }
+                }
+            }
         }
         
         let cell = self.comicsCollectionView.dequeueReusableCell(withReuseIdentifier: "CollectionLoadCell", for: indexPath) as! CharacterDetailCollectionLoadingCell
@@ -110,6 +141,19 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
         cell.loadingIndicator.startAnimating()
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == self.comicsCollectionView {
+            if self.comicsCollection == nil || indexPath.row == self.comicsCollection.items!.count {
+                if self.comicsLoadError {
+                    print("[TRY AGAIN...]")
+                    return
+                }
+                print("[LOADING...]")
+                return
+            }
+        }
     }
     
     // MARK: Table View
@@ -159,6 +203,11 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
             
             self.requests.getCollectionList(characterId: self.character.id!, collectionType: "comics", offset: self.comicsOffset, completion: { (result) in
                 guard let result = result else {
+                    DispatchQueue.main.sync {
+                        self.comicsLoadMore = false
+                        self.comicsLoadError = true
+                        self.comicsCollectionView.reloadData()
+                    }
                     return
                 }
                 
@@ -168,6 +217,7 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
                 
                 DispatchQueue.main.sync {
                     self.comicsLoadMore = true
+                    self.comicsLoadError = false
                     self.comicsCollectionView.reloadData()
                 }
             })

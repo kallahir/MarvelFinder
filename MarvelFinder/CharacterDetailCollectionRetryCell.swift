@@ -6,4 +6,10 @@
 //  Copyright © 2017 Kallahir Labs. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class CharacterDetailCollectionRetryCell: UICollectionViewCell {
+    
+    @IBOutlet weak var retryLabel: UILabel!
+    
+}

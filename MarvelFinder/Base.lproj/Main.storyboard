@@ -730,6 +730,40 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                                 <outlet property="messageLabel" destination="c6x-ee-e4I" id="39C-pS-vhf"/>
                                                             </connections>
                                                         </collectionViewCell>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionRetryCell" id="DNX-z7-UPx" customClass="CharacterDetailCollectionRetryCell" customModule="MarvelFinder" customModuleProvider="target">
+                                                            <rect key="frame" x="360" y="6" width="110" height="192"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                                <rect key="frame" x="0.0" y="0.0" width="110" height="192"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sync" translatesAutoresizingMaskIntoConstraints="NO" id="cSo-BZ-Fi7">
+                                                                        <rect key="frame" x="32" y="37" width="47" height="47"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="47" id="wXE-Fz-Iiv"/>
+                                                                        </constraints>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click here and try again..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="JSg-Im-fYi">
+                                                                        <rect key="frame" x="8" y="90" width="94" height="80"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </view>
+                                                            <constraints>
+                                                                <constraint firstItem="JSg-Im-fYi" firstAttribute="leading" secondItem="DNX-z7-UPx" secondAttribute="leadingMargin" id="2Ly-ZO-Q6e"/>
+                                                                <constraint firstItem="JSg-Im-fYi" firstAttribute="top" secondItem="cSo-BZ-Fi7" secondAttribute="bottom" constant="6" id="7Xt-9k-j2v"/>
+                                                                <constraint firstItem="JSg-Im-fYi" firstAttribute="trailing" secondItem="DNX-z7-UPx" secondAttribute="trailingMargin" id="AUt-8r-THu"/>
+                                                                <constraint firstItem="cSo-BZ-Fi7" firstAttribute="top" secondItem="DNX-z7-UPx" secondAttribute="topMargin" constant="29" id="Fx1-c2-zjh"/>
+                                                                <constraint firstItem="cSo-BZ-Fi7" firstAttribute="leading" secondItem="DNX-z7-UPx" secondAttribute="leadingMargin" constant="24" id="dux-r0-NLe"/>
+                                                                <constraint firstAttribute="bottomMargin" secondItem="JSg-Im-fYi" secondAttribute="bottom" constant="14" id="nJZ-Xm-TSJ"/>
+                                                                <constraint firstItem="cSo-BZ-Fi7" firstAttribute="centerX" secondItem="JSg-Im-fYi" secondAttribute="centerX" id="vpC-Ea-6C4"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <outlet property="retryLabel" destination="JSg-Im-fYi" id="SLj-Qg-RX7"/>
+                                                            </connections>
+                                                        </collectionViewCell>
                                                     </cells>
                                                     <connections>
                                                         <outlet property="dataSource" destination="gJE-Ef-6DP" id="3KY-Xm-bHt"/>
