@@ -88,52 +88,7 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == self.comicsCollectionView {
-            if self.comicsCollection != nil {
-                if self.comicsCollection.items!.count == 0 {
-                    let cell = self.comicsCollectionView.dequeueReusableCell(withReuseIdentifier: "CollectionMessageCell", for: indexPath) as! CharacterDetailCollectionMessageCell
-                    
-                    cell.messageLabel.text = "No records found."
-                    
-                    return cell
-                }
-
-                if self.comicsCollection.items!.count == indexPath.row {
-                    if self.comicsLoadError {
-                        let cell = self.comicsCollectionView.dequeueReusableCell(withReuseIdentifier: "CollectionRetryCell", for: indexPath) as! CharacterDetailCollectionRetryCell
-                        
-                        cell.retryLabel.text = "Try again..."
-                        
-                        return cell
-                    }
-                    
-                    let cell = self.comicsCollectionView.dequeueReusableCell(withReuseIdentifier: "CollectionLoadCell", for: indexPath) as! CharacterDetailCollectionLoadingCell
-                    
-                    cell.loadingIndicator.startAnimating()
-                    
-                    return cell
-                }
-                
-                let cell = self.comicsCollectionView.dequeueReusableCell(withReuseIdentifier: "CollectionCell", for: indexPath) as! CharacterDetailCollectionCell
-                
-                let urlString = "\(self.comicsCollection.items![indexPath.row].thumbnail!)/portrait_medium.\(self.comicsCollection.items![indexPath.row].thumbFormat!)"
-                
-                cell.collectionImage.af_setImage(withURL: URL(string: urlString)!, placeholderImage: UIImage(named: "placeholder_search"), imageTransition: UIImageView.ImageTransition.crossDissolve(0.3))
-                cell.collectionName.text = self.comicsCollection.items![indexPath.row].name
-                
-                return cell
-            }
-            
-            if self.comicsCollection == nil {
-                if collectionView == self.comicsCollectionView {
-                    if self.comicsLoadError {
-                        let cell = self.comicsCollectionView.dequeueReusableCell(withReuseIdentifier: "CollectionRetryCell", for: indexPath) as! CharacterDetailCollectionRetryCell
-                        
-                        cell.retryLabel.text = "Try again..."
-                        
-                        return cell
-                    }
-                }
-            }
+            return getCell(collectionView: self.comicsCollectionView, collection: self.comicsCollection, indexPath: indexPath, loadError: self.comicsLoadError)
         }
         
         let cell = self.comicsCollectionView.dequeueReusableCell(withReuseIdentifier: "CollectionLoadCell", for: indexPath) as! CharacterDetailCollectionLoadingCell
@@ -150,7 +105,6 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
                     print("[TRY AGAIN...]")
                     return
                 }
-                print("[LOADING...]")
                 return
             }
         }
@@ -271,6 +225,68 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
         }
         
         return numberOfItems
+    }
+    
+    func getCell<T>(collectionView: UICollectionView, collection: Collection!, indexPath: IndexPath, loadError: Bool) -> T {
+        if collection != nil {
+            if collection.items!.count == 0 {
+                return self.noRecordsFoundCell(collectionView: collectionView, indexPath: indexPath, text: "No records found.") as! T
+            }
+            
+            if collection.items!.count == indexPath.row {
+                if loadError {
+                    return self.retryCell(collectionView: collectionView, indexPath: indexPath, text: "Try again...") as! T
+                }
+                
+                return self.loadingCell(collectionView: collectionView, indexPath: indexPath) as! T
+            }
+            
+            return collectionCell(collectionView: collectionView, indexPath: indexPath, item: collection.items![indexPath.row]) as! T
+        }
+        
+        if collection == nil {
+            if loadError {
+                return self.retryCell(collectionView: collectionView, indexPath: indexPath, text: "Try again...") as! T
+            }
+        }
+        
+        return self.loadingCell(collectionView: collectionView, indexPath: indexPath) as! T
+    }
+    
+    // MARK: Collections cells
+    func noRecordsFoundCell(collectionView: UICollectionView, indexPath: IndexPath, text: String) -> CharacterDetailCollectionMessageCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionMessageCell", for: indexPath) as! CharacterDetailCollectionMessageCell
+        
+        cell.messageLabel.text = text
+        
+        return cell
+    }
+    
+    func retryCell(collectionView: UICollectionView, indexPath: IndexPath, text: String) -> CharacterDetailCollectionRetryCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionRetryCell", for: indexPath) as! CharacterDetailCollectionRetryCell
+        
+        cell.retryLabel.text = text
+        
+        return cell
+    }
+    
+    func loadingCell(collectionView: UICollectionView, indexPath: IndexPath) -> CharacterDetailCollectionLoadingCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionLoadCell", for: indexPath) as! CharacterDetailCollectionLoadingCell
+        
+        cell.loadingIndicator.startAnimating()
+        
+        return cell
+    }
+    
+    func collectionCell(collectionView: UICollectionView, indexPath: IndexPath, item: CollectionItem) -> CharacterDetailCollectionCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionCell", for: indexPath) as! CharacterDetailCollectionCell
+        
+        let urlString = "\(item.thumbnail!)/portrait_medium.\(item.thumbFormat!)"
+        
+        cell.collectionImage.af_setImage(withURL: URL(string: urlString)!, placeholderImage: UIImage(named: "placeholder_search"), imageTransition: UIImageView.ImageTransition.crossDissolve(0.3))
+        cell.collectionName.text = item.name
+        
+        return cell
     }
     
 }
