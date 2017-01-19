@@ -781,10 +781,161 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Series" id="Dzb-A6-zdV" userLabel="Series">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="220" id="OfI-as-gIN">
+                                        <rect key="frame" x="0.0" y="687.5" width="375" height="220"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OfI-as-gIN" id="bBd-bo-EWd">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="219"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JGg-Ir-xJi">
+                                                    <rect key="frame" x="8" y="8" width="359" height="203.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wM2-zV-AAh">
+                                                        <size key="itemSize" width="110" height="192"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionCell" id="zdR-Cr-TRA" customClass="CharacterDetailCollectionCell" customModule="MarvelFinder" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="6" width="110" height="192"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                                <rect key="frame" x="0.0" y="0.0" width="110" height="192"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu," textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.85000002384185791" translatesAutoresizingMaskIntoConstraints="NO" id="MIX-Pe-9cw">
+                                                                        <rect key="frame" x="10" y="132" width="90" height="60"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="60" id="IKx-OZ-Rww"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4F1-TY-zgQ">
+                                                                        <rect key="frame" x="10" y="0.0" width="90" height="128"/>
+                                                                    </imageView>
+                                                                </subviews>
+                                                            </view>
+                                                            <constraints>
+                                                                <constraint firstItem="4F1-TY-zgQ" firstAttribute="centerX" secondItem="MIX-Pe-9cw" secondAttribute="centerX" id="244-yh-kaa"/>
+                                                                <constraint firstItem="4F1-TY-zgQ" firstAttribute="leading" secondItem="zdR-Cr-TRA" secondAttribute="leadingMargin" constant="2" id="C8j-g5-GAN"/>
+                                                                <constraint firstItem="MIX-Pe-9cw" firstAttribute="top" secondItem="4F1-TY-zgQ" secondAttribute="bottom" constant="4" id="F54-h1-mJ7"/>
+                                                                <constraint firstItem="4F1-TY-zgQ" firstAttribute="top" secondItem="zdR-Cr-TRA" secondAttribute="topMargin" constant="-8" id="JZG-bs-xX9"/>
+                                                                <constraint firstItem="MIX-Pe-9cw" firstAttribute="trailing" secondItem="zdR-Cr-TRA" secondAttribute="trailingMargin" constant="-2" id="W8T-oD-eoT"/>
+                                                                <constraint firstItem="MIX-Pe-9cw" firstAttribute="bottom" secondItem="zdR-Cr-TRA" secondAttribute="bottomMargin" constant="8" id="laV-YS-GpW"/>
+                                                                <constraint firstItem="MIX-Pe-9cw" firstAttribute="leading" secondItem="zdR-Cr-TRA" secondAttribute="leadingMargin" constant="2" id="pTj-KX-GG2"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <outlet property="collectionImage" destination="4F1-TY-zgQ" id="swg-hy-Wyb"/>
+                                                                <outlet property="collectionName" destination="MIX-Pe-9cw" id="P5E-WH-Lxp"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionLoadCell" id="FWd-Al-Fv8" customClass="CharacterDetailCollectionLoadingCell" customModule="MarvelFinder" customModuleProvider="target">
+                                                            <rect key="frame" x="120" y="6" width="110" height="192"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                                <rect key="frame" x="0.0" y="0.0" width="110" height="192"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="NWE-cw-Jii">
+                                                                        <rect key="frame" x="37" y="78" width="37" height="37"/>
+                                                                        <color key="color" red="0.094117647060000004" green="0.51764705879999995" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </activityIndicatorView>
+                                                                </subviews>
+                                                            </view>
+                                                            <constraints>
+                                                                <constraint firstItem="NWE-cw-Jii" firstAttribute="centerX" secondItem="FWd-Al-Fv8" secondAttribute="centerX" id="bFp-Vk-P5Q"/>
+                                                                <constraint firstItem="NWE-cw-Jii" firstAttribute="centerY" secondItem="FWd-Al-Fv8" secondAttribute="centerY" id="r6J-Ec-SfL"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <outlet property="loadingIndicator" destination="NWE-cw-Jii" id="t1z-0q-bBO"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionMessageCell" id="wIp-LP-AyR" customClass="CharacterDetailCollectionMessageCell" customModule="MarvelFinder" customModuleProvider="target">
+                                                            <rect key="frame" x="240" y="6" width="110" height="192"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                                <rect key="frame" x="0.0" y="0.0" width="110" height="192"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No records found." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="YWA-SX-r7R">
+                                                                        <rect key="frame" x="8" y="56" width="94" height="80"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </view>
+                                                            <constraints>
+                                                                <constraint firstAttribute="bottomMargin" secondItem="YWA-SX-r7R" secondAttribute="bottom" constant="48" id="Uwf-Bs-6dc"/>
+                                                                <constraint firstItem="YWA-SX-r7R" firstAttribute="trailing" secondItem="wIp-LP-AyR" secondAttribute="trailingMargin" id="bBg-C8-qyx"/>
+                                                                <constraint firstItem="YWA-SX-r7R" firstAttribute="top" secondItem="wIp-LP-AyR" secondAttribute="topMargin" constant="48" id="j02-fV-D8T"/>
+                                                                <constraint firstItem="YWA-SX-r7R" firstAttribute="leading" secondItem="wIp-LP-AyR" secondAttribute="leadingMargin" id="mF7-MZ-1Af"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <outlet property="messageLabel" destination="YWA-SX-r7R" id="YDc-FO-ImE"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionRetryCell" id="xux-89-8Ji" customClass="CharacterDetailCollectionRetryCell" customModule="MarvelFinder" customModuleProvider="target">
+                                                            <rect key="frame" x="360" y="6" width="110" height="192"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                                <rect key="frame" x="0.0" y="0.0" width="110" height="192"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sync" translatesAutoresizingMaskIntoConstraints="NO" id="bHe-sv-pwj">
+                                                                        <rect key="frame" x="32" y="37" width="47" height="47"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="47" id="lmr-Np-VBe"/>
+                                                                        </constraints>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click here and try again..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yDD-ae-6h3">
+                                                                        <rect key="frame" x="8" y="90" width="94" height="80"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </view>
+                                                            <constraints>
+                                                                <constraint firstAttribute="bottomMargin" secondItem="yDD-ae-6h3" secondAttribute="bottom" constant="14" id="BkC-2k-9t5"/>
+                                                                <constraint firstItem="bHe-sv-pwj" firstAttribute="leading" secondItem="xux-89-8Ji" secondAttribute="leadingMargin" constant="24" id="Ere-N1-COH"/>
+                                                                <constraint firstItem="yDD-ae-6h3" firstAttribute="trailing" secondItem="xux-89-8Ji" secondAttribute="trailingMargin" id="Qac-Tf-XBv"/>
+                                                                <constraint firstItem="bHe-sv-pwj" firstAttribute="centerX" secondItem="yDD-ae-6h3" secondAttribute="centerX" id="Y24-QN-eP7"/>
+                                                                <constraint firstItem="yDD-ae-6h3" firstAttribute="top" secondItem="bHe-sv-pwj" secondAttribute="bottom" constant="6" id="YAt-Mj-Pyr"/>
+                                                                <constraint firstItem="yDD-ae-6h3" firstAttribute="leading" secondItem="xux-89-8Ji" secondAttribute="leadingMargin" id="kBv-Rb-ZHd"/>
+                                                                <constraint firstItem="bHe-sv-pwj" firstAttribute="top" secondItem="xux-89-8Ji" secondAttribute="topMargin" constant="29" id="tGE-6j-5hb"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <outlet property="retryLabel" destination="yDD-ae-6h3" id="zTF-h7-UnD"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="gJE-Ef-6DP" id="p3a-7P-C1U"/>
+                                                        <outlet property="delegate" destination="gJE-Ef-6DP" id="AJ3-yC-sh2"/>
+                                                    </connections>
+                                                </collectionView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="JGg-Ir-xJi" firstAttribute="leading" secondItem="bBd-bo-EWd" secondAttribute="leadingMargin" id="8uq-Pz-Lic"/>
+                                                <constraint firstItem="JGg-Ir-xJi" firstAttribute="bottom" secondItem="bBd-bo-EWd" secondAttribute="bottomMargin" id="EhI-g0-hT2"/>
+                                                <constraint firstItem="JGg-Ir-xJi" firstAttribute="trailing" secondItem="bBd-bo-EWd" secondAttribute="trailingMargin" id="ae7-jt-n3e"/>
+                                                <constraint firstItem="JGg-Ir-xJi" firstAttribute="top" secondItem="bBd-bo-EWd" secondAttribute="topMargin" id="kQ4-hk-Jla"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                             <tableViewSection headerTitle="Related Links" id="aoP-tq-F8b">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" textLabel="5Nd-jp-fPE" style="IBUITableViewCellStyleDefault" id="CNC-aK-gPr">
-                                        <rect key="frame" x="0.0" y="687.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="963.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CNC-aK-gPr" id="GhS-Vl-HIk">
                                             <rect key="frame" x="0.0" y="0.0" width="328" height="43"/>
@@ -801,7 +952,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" textLabel="ci7-7I-V7Z" style="IBUITableViewCellStyleDefault" id="oNe-5S-S5f">
-                                        <rect key="frame" x="0.0" y="731.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="1007.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oNe-5S-S5f" id="lgL-1f-PIf">
                                             <rect key="frame" x="0.0" y="0.0" width="328" height="43"/>
@@ -818,7 +969,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" textLabel="aNL-fr-pRT" style="IBUITableViewCellStyleDefault" id="VVC-XI-utg">
-                                        <rect key="frame" x="0.0" y="775.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="1051.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VVC-XI-utg" id="lPq-zH-029">
                                             <rect key="frame" x="0.0" y="0.0" width="328" height="43"/>
@@ -839,7 +990,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                             <tableViewSection id="Gxu-DS-bIj">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" textLabel="WIM-Ct-dew" style="IBUITableViewCellStyleDefault" id="hgT-Qz-1dn">
-                                        <rect key="frame" x="0.0" y="855.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="1131.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hgT-Qz-1dn" id="9pc-Vg-x43">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
@@ -869,6 +1020,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                         <outlet property="characterImage" destination="TKQ-VD-fgG" id="GsE-Ck-qab"/>
                         <outlet property="characterName" destination="vhl-MN-POz" id="Zt7-GO-qzo"/>
                         <outlet property="comicsCollectionView" destination="nzw-k1-lCR" id="qQi-Rv-1zj"/>
+                        <outlet property="seriesCollectionView" destination="JGg-Ir-xJi" id="ecT-6B-ces"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wvh-Om-qBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
