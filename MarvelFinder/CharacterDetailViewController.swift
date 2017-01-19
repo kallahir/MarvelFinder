@@ -29,11 +29,18 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
     var seriesLoadMore = false
     var seriesLoadError = false
     @IBOutlet weak var storiesCollectionView: UICollectionView!
+    var storiesCollection: Collection!
+    var storiesOffset   = 0
+    var storiesLoadMore = false
+    var storiesLoadError = false
     @IBOutlet weak var eventsCollectionView: UICollectionView!
+    var eventsCollection: Collection!
+    var eventsOffset   = 0
+    var eventsLoadMore = false
+    var eventsLoadError = false
     
     var urls = Dictionary<String, String>()
-    // TODO: don't forget to update it!
-    private let relatedLinksSection = 2
+    private let relatedLinksSection = 5
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,11 +66,11 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
         self.seriesCollectionView.delegate = self
         self.seriesCollectionView.dataSource = self
 
-//        self.storiesCollectionView.delegate = self
-//        self.storiesCollectionView.dataSource = self
-//        
-//        self.eventsCollectionView.delegate = self
-//        self.eventsCollectionView.dataSource = self
+        self.storiesCollectionView.delegate = self
+        self.storiesCollectionView.dataSource = self
+        
+        self.eventsCollectionView.delegate = self
+        self.eventsCollectionView.dataSource = self
         
         self.loadCollectionList(characterId: self.character.id!, collectionType: "comics", offset: self.comicsOffset) { (result) in
             self.comicsCollection = result
@@ -73,6 +80,16 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
         self.loadCollectionList(characterId: self.character.id!, collectionType: "series", offset: self.seriesOffset) { (result) in
             self.seriesCollection = result
             self.refreshCollectionView("series", loadMore: true, loadError: false)
+        }
+        
+        self.loadCollectionList(characterId: self.character.id!, collectionType: "stories", offset: self.storiesOffset) { (result) in
+            self.storiesCollection = result
+            self.refreshCollectionView("stories", loadMore: true, loadError: false)
+        }
+        
+        self.loadCollectionList(characterId: self.character.id!, collectionType: "events", offset: self.eventsOffset) { (result) in
+            self.eventsCollection = result
+            self.refreshCollectionView("events", loadMore: true, loadError: false)
         }
     }
     
@@ -86,14 +103,22 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
             return getCell(collectionView: self.comicsCollectionView, collection: self.comicsCollection, indexPath: indexPath, loadError: self.comicsLoadError)
         }
         
-        return getCell(collectionView: self.seriesCollectionView, collection: self.seriesCollection, indexPath: indexPath, loadError: self.seriesLoadError)
+        if collectionView == self.seriesCollectionView {
+            return getCell(collectionView: self.seriesCollectionView, collection: self.seriesCollection, indexPath: indexPath, loadError: self.seriesLoadError)
+        }
+        
+        if collectionView == self.storiesCollectionView {
+            return getCell(collectionView: self.storiesCollectionView, collection: self.storiesCollection, indexPath: indexPath, loadError: self.storiesLoadError)
+        }
+
+        return getCell(collectionView: self.eventsCollectionView, collection: self.eventsCollection, indexPath: indexPath, loadError: self.eventsLoadError)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == self.comicsCollectionView {
             if self.comicsCollection == nil || indexPath.row == self.comicsCollection.items!.count {
                 if self.comicsLoadError {
-                    print("[TRY AGAIN COMICS...]")
+                    print("[TRY AGAIN comics...]")
                     return
                 }
                 return
@@ -102,7 +127,23 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
         
         if self.seriesCollection == nil || indexPath.row == self.seriesCollection.items!.count {
             if self.seriesLoadError {
-                print("[TRY AGAIN SERIES...]")
+                print("[TRY AGAIN series...]")
+                return
+            }
+            return
+        }
+        
+        if self.storiesCollection == nil || indexPath.row == self.storiesCollection.items!.count {
+            if self.storiesLoadError {
+                print("[TRY AGAIN stories...]")
+                return
+            }
+            return
+        }
+        
+        if self.eventsCollection == nil || indexPath.row == self.eventsCollection.items!.count {
+            if self.eventsLoadError {
+                print("[TRY AGAIN events...]")
                 return
             }
             return
@@ -139,6 +180,12 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
                 break
             case self.seriesCollectionView:
                 self.loadMoreSeries()
+                break
+            case self.storiesCollectionView:
+                self.loadMoreStories()
+                break
+            case self.eventsCollectionView:
+                self.loadMoreEvents()
                 break
             default:
                 break
@@ -186,6 +233,50 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
                     }
                 }
                 self.refreshCollectionView("series", loadMore: true, loadError: false)
+            })
+        }
+    }
+    
+    func loadMoreStories() {
+        if self.storiesLoadMore == true {
+            self.storiesLoadMore = false
+            self.storiesOffset += 20
+            
+            if self.storiesCollection != nil {
+                if self.storiesOffset >= self.storiesCollection.total! {
+                    return
+                }
+            }
+            
+            self.loadCollectionList(characterId: self.character.id!, collectionType: "stories", offset: self.storiesOffset, completion: { (result) in
+                if result != nil {
+                    for item in (result?.items!)! {
+                        self.storiesCollection.items!.append(item)
+                    }
+                }
+                self.refreshCollectionView("stories", loadMore: true, loadError: false)
+            })
+        }
+    }
+    
+    func loadMoreEvents() {
+        if self.eventsLoadMore == true {
+            self.eventsLoadMore = false
+            self.eventsOffset += 20
+            
+            if self.eventsCollection != nil {
+                if self.eventsOffset >= self.eventsCollection.total! {
+                    return
+                }
+            }
+            
+            self.loadCollectionList(characterId: self.character.id!, collectionType: "events", offset: self.eventsOffset, completion: { (result) in
+                if result != nil {
+                    for item in (result?.items!)! {
+                        self.eventsCollection.items!.append(item)
+                    }
+                }
+                self.refreshCollectionView("events", loadMore: true, loadError: false)
             })
         }
     }
@@ -238,6 +329,28 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
                     numberOfItems = self.seriesCollection.items!.count
                     
                     if !(self.seriesCollection.items!.count >= self.seriesCollection.total!) {
+                        numberOfItems += 1
+                    }
+                }
+            }
+            break
+        case self.storiesCollectionView:
+            if self.storiesCollection != nil {
+                if self.storiesCollection.count! != 0 {
+                    numberOfItems = self.storiesCollection.items!.count
+                    
+                    if !(self.storiesCollection.items!.count >= self.storiesCollection.total!) {
+                        numberOfItems += 1
+                    }
+                }
+            }
+            break
+        case self.eventsCollectionView:
+            if self.eventsCollection != nil {
+                if self.eventsCollection.count! != 0 {
+                    numberOfItems = self.eventsCollection.items!.count
+                    
+                    if !(self.eventsCollection.items!.count >= self.eventsCollection.total!) {
                         numberOfItems += 1
                     }
                 }
@@ -304,7 +417,7 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
     func collectionCell(collectionView: UICollectionView, indexPath: IndexPath, item: CollectionItem) -> CharacterDetailCollectionCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionCell", for: indexPath) as! CharacterDetailCollectionCell
         
-        let urlString = "\(item.thumbnail!)/portrait_medium.\(item.thumbFormat!)"
+        let urlString = "\(item.thumbnail ?? "nothing")/portrait_medium.\(item.thumbFormat ?? "nothing")"
         
         cell.collectionImage.af_setImage(withURL: URL(string: urlString)!, placeholderImage: UIImage(named: "placeholder_search"), imageTransition: UIImageView.ImageTransition.crossDissolve(0.3))
         cell.collectionName.text = item.name
@@ -338,6 +451,20 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
                 self.seriesLoadMore = loadMore
                 self.seriesLoadError = loadError
                 self.seriesCollectionView.reloadData()
+            }
+            break
+        case "stories":
+            DispatchQueue.main.sync {
+                self.storiesLoadMore = loadMore
+                self.storiesLoadError = loadError
+                self.storiesCollectionView.reloadData()
+            }
+            break
+        case "events":
+            DispatchQueue.main.sync {
+                self.eventsLoadMore = loadMore
+                self.eventsLoadError = loadError
+                self.eventsCollectionView.reloadData()
             }
             break
         default:
