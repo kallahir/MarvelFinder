@@ -176,16 +176,44 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
         if (maxOffset - offset) <= 55 {
             switch scrollView {
             case self.comicsCollectionView:
-                self.loadMoreComics()
+                self.loadMore(loadMore: &self.comicsLoadMore, offset: &self.comicsOffset, collection: self.comicsCollection, collectionType: "comics", completion: { (result) in
+                    if result != nil {
+                        for item in (result?.items!)! {
+                            self.comicsCollection.items!.append(item)
+                        }
+                    }
+                    self.refreshCollectionView("comics", loadMore: true, loadError: false)
+                })
                 break
             case self.seriesCollectionView:
-                self.loadMoreSeries()
+                self.loadMore(loadMore: &self.seriesLoadMore, offset: &self.seriesOffset, collection: self.seriesCollection, collectionType: "series", completion: { (result) in
+                    if result != nil {
+                        for item in (result?.items!)! {
+                            self.seriesCollection.items!.append(item)
+                        }
+                    }
+                    self.refreshCollectionView("series", loadMore: true, loadError: false)
+                })
                 break
             case self.storiesCollectionView:
-                self.loadMoreStories()
+                self.loadMore(loadMore: &self.storiesLoadMore, offset: &self.storiesOffset, collection: self.storiesCollection, collectionType: "stories", completion: { (result) in
+                    if result != nil {
+                        for item in (result?.items!)! {
+                            self.storiesCollection.items!.append(item)
+                        }
+                    }
+                    self.refreshCollectionView("stories", loadMore: true, loadError: false)
+                })
                 break
             case self.eventsCollectionView:
-                self.loadMoreEvents()
+                self.loadMore(loadMore: &self.eventsLoadMore, offset: &self.eventsOffset, collection: self.eventsCollection, collectionType: "events", completion: { (result) in
+                    if result != nil {
+                        for item in (result?.items!)! {
+                            self.eventsCollection.items!.append(item)
+                        }
+                    }
+                    self.refreshCollectionView("events", loadMore: true, loadError: false)
+                })
                 break
             default:
                 break
@@ -193,90 +221,19 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
         }
     }
     
-    func loadMoreComics() {
-        if self.comicsLoadMore == true {
-            self.comicsLoadMore = false
-            self.comicsOffset += 20
+    func loadMore(loadMore: inout Bool, offset: inout Int, collection: Collection!, collectionType: String, completion: @escaping (_ result: Collection?) -> Void) {
+        if loadMore == true {
+            loadMore = false
+            offset += 20
             
-            if self.comicsCollection != nil {
-                if self.comicsOffset >= self.comicsCollection.total! {
+            if collection != nil {
+                if offset >= collection.total! {
                     return
                 }
             }
             
-            self.loadCollectionList(characterId: self.character.id!, collectionType: "comics", offset: self.comicsOffset, completion: { (result) in
-                if result != nil {
-                    for item in (result?.items!)! {
-                        self.comicsCollection.items!.append(item)
-                    }
-                }
-                self.refreshCollectionView("comics", loadMore: true, loadError: false)
-            })
-        }
-    }
-    
-    func loadMoreSeries() {
-        if self.seriesLoadMore == true {
-            self.seriesLoadMore = false
-            self.seriesOffset += 20
-            
-            if self.seriesCollection != nil {
-                if self.seriesOffset >= self.seriesCollection.total! {
-                    return
-                }
-            }
-            
-            self.loadCollectionList(characterId: self.character.id!, collectionType: "series", offset: self.seriesOffset, completion: { (result) in
-                if result != nil {
-                    for item in (result?.items!)! {
-                        self.seriesCollection.items!.append(item)
-                    }
-                }
-                self.refreshCollectionView("series", loadMore: true, loadError: false)
-            })
-        }
-    }
-    
-    func loadMoreStories() {
-        if self.storiesLoadMore == true {
-            self.storiesLoadMore = false
-            self.storiesOffset += 20
-            
-            if self.storiesCollection != nil {
-                if self.storiesOffset >= self.storiesCollection.total! {
-                    return
-                }
-            }
-            
-            self.loadCollectionList(characterId: self.character.id!, collectionType: "stories", offset: self.storiesOffset, completion: { (result) in
-                if result != nil {
-                    for item in (result?.items!)! {
-                        self.storiesCollection.items!.append(item)
-                    }
-                }
-                self.refreshCollectionView("stories", loadMore: true, loadError: false)
-            })
-        }
-    }
-    
-    func loadMoreEvents() {
-        if self.eventsLoadMore == true {
-            self.eventsLoadMore = false
-            self.eventsOffset += 20
-            
-            if self.eventsCollection != nil {
-                if self.eventsOffset >= self.eventsCollection.total! {
-                    return
-                }
-            }
-            
-            self.loadCollectionList(characterId: self.character.id!, collectionType: "events", offset: self.eventsOffset, completion: { (result) in
-                if result != nil {
-                    for item in (result?.items!)! {
-                        self.eventsCollection.items!.append(item)
-                    }
-                }
-                self.refreshCollectionView("events", loadMore: true, loadError: false)
+            self.loadCollectionList(characterId: self.character.id!, collectionType: collectionType, offset: offset, completion: { (result) in
+                completion(result)
             })
         }
     }
@@ -363,6 +320,7 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
         return numberOfItems
     }
     
+    // MARK: Collections cells
     func getCell<T>(collectionView: UICollectionView, collection: Collection!, indexPath: IndexPath, loadError: Bool) -> T {
         if collection != nil {
             if collection.items!.count == 0 {
@@ -389,7 +347,6 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
         return self.loadingCell(collectionView: collectionView, indexPath: indexPath) as! T
     }
     
-    // MARK: Collections cells
     func noRecordsFoundCell(collectionView: UICollectionView, indexPath: IndexPath, text: String) -> CharacterDetailCollectionMessageCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionMessageCell", for: indexPath) as! CharacterDetailCollectionMessageCell
         
