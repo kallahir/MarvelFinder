@@ -39,6 +39,9 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
     var eventsLoadMore = false
     var eventsLoadError = false
     
+    var selectedCollectionItem: CollectionItem!
+    var selectedCollectionTitle: String!
+    
     var urls = Dictionary<String, String>()
     private let relatedLinksSection = 5
     
@@ -93,6 +96,18 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowCollectionItem" {
+            let collectionDetailVC = segue.destination as! CollectionItemDetailViewController
+            collectionDetailVC.collectionItem = self.selectedCollectionItem
+            collectionDetailVC.collectionType = self.selectedCollectionTitle
+        }
+        
+        let backItem = UIBarButtonItem()
+        backItem.title = NSLocalizedString("Navigation.back", comment: "")
+        navigationItem.backBarButtonItem = backItem
+    }
+    
     // MARK: Collection View
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.numberOfItems(collectionView: collectionView)
@@ -135,6 +150,9 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
                 }
                 return
             }
+            self.selectedCollectionItem = self.comicsCollection.items![indexPath.row]
+            self.selectedCollectionTitle = "Comics"
+            self.performSegue(withIdentifier: "ShowCollectionItem", sender: self)
         }
         
         if collectionView == self.seriesCollectionView {

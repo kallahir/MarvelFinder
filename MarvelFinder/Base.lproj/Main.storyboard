@@ -1325,11 +1325,58 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                         <outlet property="eventsCollectionView" destination="aQ9-rO-0Wt" id="qp0-kG-kGZ"/>
                         <outlet property="seriesCollectionView" destination="JGg-Ir-xJi" id="ecT-6B-ces"/>
                         <outlet property="storiesCollectionView" destination="GXi-rA-rcO" id="CkE-qS-14g"/>
+                        <segue destination="lu0-Tn-KgH" kind="show" identifier="ShowCollectionItem" id="xXO-JK-jzM"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wvh-Om-qBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1636" y="878.41079460269873"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="vQD-o2-UOj">
+            <objects>
+                <viewController id="lu0-Tn-KgH" customClass="CollectionItemDetailViewController" customModule="MarvelFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wE0-ap-tgO"/>
+                        <viewControllerLayoutGuide type="bottom" id="6n2-sw-ieN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oOi-cR-FgK">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder_search" translatesAutoresizingMaskIntoConstraints="NO" id="2LB-q0-RHD">
+                                <rect key="frame" x="79" y="93" width="216" height="324"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ipy-Qz-tD7">
+                                <rect key="frame" x="79" y="425" width="216" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="qi1-Xa-mQ0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2LB-q0-RHD" firstAttribute="top" secondItem="wE0-ap-tgO" secondAttribute="bottom" constant="93" id="4ku-rm-jdJ"/>
+                            <constraint firstItem="2LB-q0-RHD" firstAttribute="leading" secondItem="oOi-cR-FgK" secondAttribute="leadingMargin" constant="63" id="7aq-pC-s4y"/>
+                            <constraint firstItem="6n2-sw-ieN" firstAttribute="top" secondItem="Ipy-Qz-tD7" secondAttribute="bottom" constant="50" id="IxE-9t-3sD"/>
+                            <constraint firstItem="2LB-q0-RHD" firstAttribute="trailing" secondItem="Ipy-Qz-tD7" secondAttribute="trailing" id="LsN-mc-hNZ"/>
+                            <constraint firstItem="Ipy-Qz-tD7" firstAttribute="top" secondItem="2LB-q0-RHD" secondAttribute="bottom" constant="8" symbolic="YES" id="XgY-Uy-5MP"/>
+                            <constraint firstItem="2LB-q0-RHD" firstAttribute="centerX" secondItem="oOi-cR-FgK" secondAttribute="centerX" id="a8a-3d-6Cv"/>
+                            <constraint firstItem="2LB-q0-RHD" firstAttribute="leading" secondItem="Ipy-Qz-tD7" secondAttribute="leading" id="crq-f3-fzv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="Thh-75-N0w"/>
+                    <connections>
+                        <outlet property="collectionImage" destination="2LB-q0-RHD" id="aO2-iw-gqb"/>
+                        <outlet property="collectionTitle" destination="Ipy-Qz-tD7" id="GyV-eC-ux8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7dP-Mj-Mg6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2512.8000000000002" y="877.51124437781118"/>
         </scene>
         <!--Character Search-->
         <scene sceneID="cOe-7w-neP">
@@ -1509,6 +1556,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         <image name="sync" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="j9y-IN-wPb"/>
+        <segue reference="QiK-Sl-h5m"/>
     </inferredMetricsTieBreakers>
 </document>
