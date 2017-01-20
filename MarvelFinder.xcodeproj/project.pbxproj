@@ -11,6 +11,7 @@
 		0704FAFF1E2D9D6F00B3E4E4 /* CharacterListRetryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0704FAFE1E2D9D6F00B3E4E4 /* CharacterListRetryCell.swift */; };
 		0704FB021E2DC8D000B3E4E4 /* CharacterSearchRetryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0704FB011E2DC8D000B3E4E4 /* CharacterSearchRetryCell.swift */; };
 		0704FB041E2F014300B3E4E4 /* CharacterDetailCollectionRetryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0704FB031E2F014300B3E4E4 /* CharacterDetailCollectionRetryCell.swift */; };
+		0704FB0C1E31BBAC00B3E4E4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0704FB0E1E31BBAC00B3E4E4 /* Localizable.strings */; };
 		071BC45A1E1355570020D074 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071BC4591E1355570020D074 /* AppDelegate.swift */; };
 		071BC45C1E1355570020D074 /* CharacterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071BC45B1E1355570020D074 /* CharacterListViewController.swift */; };
 		071BC45F1E1355570020D074 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 071BC45D1E1355570020D074 /* Main.storyboard */; };
@@ -69,6 +70,10 @@
 		0704FAFE1E2D9D6F00B3E4E4 /* CharacterListRetryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterListRetryCell.swift; sourceTree = "<group>"; };
 		0704FB011E2DC8D000B3E4E4 /* CharacterSearchRetryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterSearchRetryCell.swift; sourceTree = "<group>"; };
 		0704FB031E2F014300B3E4E4 /* CharacterDetailCollectionRetryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailCollectionRetryCell.swift; sourceTree = "<group>"; };
+		0704FB061E31B8DB00B3E4E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		0704FB091E31B9D700B3E4E4 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
+		0704FB0D1E31BBAC00B3E4E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0704FB0F1E31BBB000B3E4E4 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		071BC4561E1355570020D074 /* MarvelFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		071BC4591E1355570020D074 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		071BC45B1E1355570020D074 /* CharacterListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewController.swift; sourceTree = "<group>"; };
@@ -183,6 +188,7 @@
 				075F838B1E19E7F5001B756F /* Util */,
 				071BC45D1E1355570020D074 /* Main.storyboard */,
 				07611F891E15C7AF003CCF66 /* LaunchScreen.storyboard */,
+				0704FB0E1E31BBAC00B3E4E4 /* Localizable.strings */,
 				075F83901E1B07C2001B756F /* Assets.xcassets */,
 				071BC4651E1355570020D074 /* Info.plist */,
 				07611F4D1E15C2A7003CCF66 /* MarvelAPIKeys.plist */,
@@ -410,6 +416,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = 071BC44D1E1355570020D074;
 			productRefGroup = 071BC4571E1355570020D074 /* Products */;
@@ -428,6 +435,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0704FB0C1E31BBAC00B3E4E4 /* Localizable.strings in Resources */,
 				07611F8A1E15C7AF003CCF66 /* LaunchScreen.storyboard in Resources */,
 				071BC45F1E1355570020D074 /* Main.storyboard in Resources */,
 				075F83911E1B07C2001B756F /* Assets.xcassets in Resources */,
@@ -654,10 +662,21 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		0704FB0E1E31BBAC00B3E4E4 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0704FB0D1E31BBAC00B3E4E4 /* en */,
+				0704FB0F1E31BBB000B3E4E4 /* pt-BR */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		071BC45D1E1355570020D074 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				071BC45E1E1355570020D074 /* Base */,
+				0704FB061E31B8DB00B3E4E4 /* en */,
+				0704FB091E31B9D700B3E4E4 /* pt-BR */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -669,6 +688,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -718,6 +738,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";

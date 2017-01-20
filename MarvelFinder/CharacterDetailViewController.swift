@@ -51,7 +51,7 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
         self.characterImage.af_setImage(withURL: URL(string: urlString)!, placeholderImage: UIImage(named: "placeholder_search"), imageTransition: UIImageView.ImageTransition.crossDissolve(0.3))
         
         if (self.character!.description?.isEmpty)! {
-            self.characterDescription.text = "No description available."
+            self.characterDescription.text = NSLocalizedString("Detail.noDescription", comment: "")
         } else {
             self.characterDescription.text = self.character!.description
         }
@@ -137,46 +137,50 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
             }
         }
         
-        if self.seriesCollection == nil || indexPath.row == self.seriesCollection.items!.count {
-            if self.seriesLoadError {
-                self.seriesLoadError = false
-                self.seriesCollectionView.reloadData()
-                
-                self.loadCollectionList(characterId: self.character.id!, collectionType: "series", offset: self.seriesOffset) { (result) in
-                    if self.seriesCollection == nil {
-                        self.seriesCollection = result
-                    } else {
-                        for item in (result?.items!)! {
-                            self.seriesCollection.items!.append(item)
+        if collectionView == self.seriesCollectionView {
+            if self.seriesCollection == nil || indexPath.row == self.seriesCollection.items!.count {
+                if self.seriesLoadError {
+                    self.seriesLoadError = false
+                    self.seriesCollectionView.reloadData()
+                    
+                    self.loadCollectionList(characterId: self.character.id!, collectionType: "series", offset: self.seriesOffset) { (result) in
+                        if self.seriesCollection == nil {
+                            self.seriesCollection = result
+                        } else {
+                            for item in (result?.items!)! {
+                                self.seriesCollection.items!.append(item)
+                            }
                         }
+                        self.refreshCollectionView("series", loadMore: true, loadError: false, offset: self.seriesOffset)
                     }
-                    self.refreshCollectionView("series", loadMore: true, loadError: false, offset: self.seriesOffset)
+                    return
                 }
                 return
             }
-            return
         }
         
-        if self.storiesCollection == nil || indexPath.row == self.storiesCollection.items!.count {
-            if self.storiesLoadError {
-                self.storiesLoadError = false
-                self.storiesCollectionView.reloadData()
-                
-                self.loadCollectionList(characterId: self.character.id!, collectionType: "stories", offset: self.storiesOffset) { (result) in
-                    if self.storiesCollection == nil {
-                        self.storiesCollection = result
-                    } else {
-                        for item in (result?.items!)! {
-                            self.storiesCollection.items!.append(item)
+        if collectionView == self.storiesCollectionView {
+            if self.storiesCollection == nil || indexPath.row == self.storiesCollection.items!.count {
+                if self.storiesLoadError {
+                    self.storiesLoadError = false
+                    self.storiesCollectionView.reloadData()
+                    
+                    self.loadCollectionList(characterId: self.character.id!, collectionType: "stories", offset: self.storiesOffset) { (result) in
+                        if self.storiesCollection == nil {
+                            self.storiesCollection = result
+                        } else {
+                            for item in (result?.items!)! {
+                                self.storiesCollection.items!.append(item)
+                            }
                         }
+                        self.refreshCollectionView("stories", loadMore: true, loadError: false, offset: self.storiesOffset)
                     }
-                    self.refreshCollectionView("stories", loadMore: true, loadError: false, offset: self.storiesOffset)
+                    return
                 }
                 return
             }
-            return
         }
-        
+
         if self.eventsCollection == nil || indexPath.row == self.eventsCollection.items!.count {
             if self.eventsLoadError {
                 self.eventsLoadError = false
@@ -372,12 +376,12 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
     func getCell<T>(collectionView: UICollectionView, collection: Collection!, indexPath: IndexPath, loadError: Bool) -> T {
         if collection != nil {
             if collection.items!.count == 0 {
-                return self.noRecordsFoundCell(collectionView: collectionView, indexPath: indexPath, text: "No records found.") as! T
+                return self.noRecordsFoundCell(collectionView: collectionView, indexPath: indexPath, text: NSLocalizedString("Cell.noResults", comment: "")) as! T
             }
             
             if collection.items!.count == indexPath.row {
                 if loadError {
-                    return self.retryCell(collectionView: collectionView, indexPath: indexPath, text: "Try again...") as! T
+                    return self.retryCell(collectionView: collectionView, indexPath: indexPath, text: NSLocalizedString("Cell.tryAgain", comment: "")) as! T
                 }
                 
                 return self.loadingCell(collectionView: collectionView, indexPath: indexPath) as! T
@@ -388,7 +392,7 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
         
         if collection == nil {
             if loadError {
-                return self.retryCell(collectionView: collectionView, indexPath: indexPath, text: "Try again...") as! T
+                return self.retryCell(collectionView: collectionView, indexPath: indexPath, text: NSLocalizedString("Cell.tryAgain", comment: "")) as! T
             }
         }
         

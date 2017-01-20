@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  MarvelFinder
+
+  Created by Itallo Rossi Lucas on 20/01/17.
+  Copyright © 2017 Kallahir Labs. All rights reserved.
+*/
+
+Navigation.back = "Voltar";
+
+Cell.tryAgain  = "Clique aqui e tente novamente...";
+Cell.noResults = "Nenhum registro encontrado.";
+Cell.marvelAck = "Dados fornecidos por Marvel. © 2014 Marvel";
+
+Search.placeholder = "Nome do Personagem";
+Search.alert.title = "Texto Inválido";
+Search.alert.text  = "Por favor não inserir emojis ou outros símbolos.";
+
+Detail.noDescription = "Personagem não possui descrição.";

@@ -47,7 +47,7 @@ class CharacterSearchViewController: UITableViewController, UISearchBarDelegate 
         UISearchBar.appearance().tintColor = UIColor.white
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).tintColor = UIColor.system
 
-        self.searchController.searchBar.placeholder = "Character Name"
+        self.searchController.searchBar.placeholder = NSLocalizedString("Search.placeholder", comment: "")
         self.searchController.searchBar.layer.borderWidth = 1
         self.searchController.searchBar.layer.borderColor = UIColor.system.cgColor
     }
@@ -71,6 +71,7 @@ class CharacterSearchViewController: UITableViewController, UISearchBarDelegate 
             self.searchText = searchBar.text!.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlHostAllowed)!
             self.searchCharacter(name: self.searchText, offset: self.offset)
         } else {
+            self.searchingIndicator.stopAnimating()
             self.invalidTextAlert()
         }
     }
@@ -81,7 +82,7 @@ class CharacterSearchViewController: UITableViewController, UISearchBarDelegate 
             if self.result.count == 0 {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterNotFoundCell", for: indexPath)
                 
-                cell.textLabel?.text = "No results found"
+                cell.textLabel?.text = NSLocalizedString("Cell.noResults", comment: "")
                 
                 return cell
             }
@@ -90,7 +91,7 @@ class CharacterSearchViewController: UITableViewController, UISearchBarDelegate 
                 if self.loadErrorFlag {
                     let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterSearchRetryCell", for: indexPath) as! CharacterSearchRetryCell
                     
-                    cell.retryLabel.text = "Click here and try again..."
+                    cell.retryLabel.text = NSLocalizedString("Cell.tryAgain", comment: "")
                     
                     return cell
                 }
@@ -98,7 +99,7 @@ class CharacterSearchViewController: UITableViewController, UISearchBarDelegate 
                 if self.result.characters!.count >= self.result.total! {
                     let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterNotFoundCell", for: indexPath)
                     
-                    cell.textLabel?.text = "Data provided by Marvel. © 2014 Marvel"
+                    cell.textLabel?.text = NSLocalizedString("Cell.marvelAck", comment: "")
                     
                     return cell
                 }
@@ -115,7 +116,7 @@ class CharacterSearchViewController: UITableViewController, UISearchBarDelegate 
             if self.loadErrorFlag {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterSearchRetryCell", for: indexPath) as! CharacterSearchRetryCell
                 
-                cell.retryLabel.text = "Click here and try again..."
+                cell.retryLabel.text = NSLocalizedString("Cell.tryAgain", comment: "")
                 
                 return cell
             }
@@ -185,7 +186,7 @@ class CharacterSearchViewController: UITableViewController, UISearchBarDelegate 
         }
         
         let backItem = UIBarButtonItem()
-        backItem.title = "Back"
+        backItem.title = NSLocalizedString("Navigation.back", comment: "")
         navigationItem.backBarButtonItem = backItem
     }
     
@@ -248,7 +249,7 @@ class CharacterSearchViewController: UITableViewController, UISearchBarDelegate 
     }
     
     func invalidTextAlert() {
-        let alert = UIAlertController(title: "Invalid Text", message: "Please do not insert emojis and other symbols.", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: NSLocalizedString("Search.alert.title", comment: ""), message: NSLocalizedString("Search.alert.text", comment: ""), preferredStyle: UIAlertControllerStyle.alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(action)
         

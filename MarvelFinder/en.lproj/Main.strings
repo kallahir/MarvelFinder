@@ -1,0 +1,160 @@
+
+/* Class = "UIButton"; normalTitle = "Revicon"; ObjectID = "15W-4n-Xie"; */
+"15W-4n-Xie.normalTitle" = "Revicon";
+
+/* Class = "UITextView"; text = "THE FOLLOWING SETS FORTH ATTRIBUTION NOTICES FOR THIRD PARTY SOFTWARE THAT MAY BE CONTAINED IN PORTIONS OF THE MARVEL FINDER.\n\n--------------------------------------------\nAlamofire\n--------------------------------------------\nCopyright (c) 2014-2016 Alamofire Software Foundation (http://alamofire.org/)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n\n--------------------------------------------\nAlamofireImage\n--------------------------------------------\nCopyright (c) 2015-2016 Alamofire Software Foundation (http://alamofire.org/)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.
+
+--------------------------------------------\nObjectMapper\n--------------------------------------------\nThe MIT License (MIT)\nCopyright (c) 2014 Hearst\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\n--------------------------------------------\nSwfitHash\n--------------------------------------------\nCopyright (c) 2015 Khoa Pham\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."; ObjectID = "3es-07-EeK"; */
+"3es-07-EeK.text" = "THE FOLLOWING SETS FORTH ATTRIBUTION NOTICES FOR THIRD PARTY SOFTWARE THAT MAY BE CONTAINED IN PORTIONS OF THE MARVEL FINDER.\n\n--------------------------------------------\nAlamofire\n--------------------------------------------\nCopyright (c) 2014-2016 Alamofire Software Foundation (http://alamofire.org/)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n\n--------------------------------------------\nAlamofireImage\n--------------------------------------------\nCopyright (c) 2015-2016 Alamofire Software Foundation (http://alamofire.org/)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.
+
+--------------------------------------------\nObjectMapper\n--------------------------------------------\nThe MIT License (MIT)\nCopyright (c) 2014 Hearst\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\n--------------------------------------------\nSwfitHash\n--------------------------------------------\nCopyright (c) 2015 Khoa Pham\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.";
+
+/* Class = "UILabel"; text = "Details"; ObjectID = "5Nd-jp-fPE"; */
+"5Nd-jp-fPE.text" = "Details";
+
+/* Class = "UILabel"; text = "Version 1.0.0"; ObjectID = "6oL-Ov-xLf"; */
+"6oL-Ov-xLf.text" = "Version 1.0.0";
+
+/* Class = "UILabel"; text = "Click here and try again..."; ObjectID = "7fJ-rh-WT3"; */
+"7fJ-rh-WT3.text" = "Click here and try again...";
+
+/* Class = "UILabel"; text = "Itallo Rossi Lucas"; ObjectID = "9m3-nd-v6h"; */
+"9m3-nd-v6h.text" = "Itallo Rossi Lucas";
+
+/* Class = "UINavigationItem"; title = "Character Search"; ObjectID = "9wZ-f9-pAD"; */
+"9wZ-f9-pAD.title" = "Character Search";
+
+/* Class = "UILabel"; text = "Licenses"; ObjectID = "A8w-nU-K9L"; */
+"A8w-nU-K9L.text" = "Licenses";
+
+/* Class = "UILabel"; text = "Icons made by"; ObjectID = "CkB-TZ-bdc"; */
+"CkB-TZ-bdc.text" = "Icons made by";
+
+/* Class = "UIButton"; normalTitle = "Marvel®"; ObjectID = "DLJ-uK-g1v"; */
+"DLJ-uK-g1v.normalTitle" = "Marvel®";
+
+/* Class = "UIButton"; normalTitle = "www.flaticon.com"; ObjectID = "DUW-WW-jQ8"; */
+"DUW-WW-jQ8.normalTitle" = "www.flaticon.com";
+
+/* Class = "UITableViewSection"; headerTitle = "Series"; ObjectID = "Dzb-A6-zdV"; */
+"Dzb-A6-zdV.headerTitle" = "Series";
+
+/* Class = "UITableViewSection"; headerTitle = "Stories"; ObjectID = "JGr-8T-hBq"; */
+"JGr-8T-hBq.headerTitle" = "Stories";
+
+/* Class = "UILabel"; text = "Click here and try again..."; ObjectID = "JSg-Im-fYi"; */
+"JSg-Im-fYi.text" = "Click here and try again...";
+
+/* Class = "UILabel"; text = "Found at"; ObjectID = "K5F-eR-vWc"; */
+"K5F-eR-vWc.text" = "Found at";
+
+/* Class = "UILabel"; text = "Data provided by"; ObjectID = "Lr8-7G-w3Z"; */
+"Lr8-7G-w3Z.text" = "Data provided by";
+
+/* Class = "UILabel"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu,"; ObjectID = "MIX-Pe-9cw"; */
+"MIX-Pe-9cw.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu,";
+
+/* Class = "UILabel"; text = "No records found."; ObjectID = "Mus-9y-WSv"; */
+"Mus-9y-WSv.text" = "No records found.";
+
+/* Class = "UIButton"; normalTitle = "Icons8"; ObjectID = "N24-5H-zSm"; */
+"N24-5H-zSm.normalTitle" = "Icons8";
+
+/* Class = "UILabel"; text = "Marvel Finder © 2017 Itallo Rossi Lucas"; ObjectID = "NVb-qY-odJ"; */
+"NVb-qY-odJ.text" = "Marvel Finder © 2017 Itallo Rossi Lucas";
+
+/* Class = "UILabel"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu,"; ObjectID = "Rb3-lW-fEy"; */
+"Rb3-lW-fEy.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu,";
+
+/* Class = "UILabel"; text = "Found at"; ObjectID = "Vhw-La-QM7"; */
+"Vhw-La-QM7.text" = "Found at";
+
+/* Class = "UILabel"; text = "Data provided by Marvel. © 2014 Marvel"; ObjectID = "W6a-de-ME8"; */
+"W6a-de-ME8.text" = "Data provided by Marvel. © 2014 Marvel";
+
+/* Class = "UILabel"; text = "Data provided by Marvel. © 2014 Marvel"; ObjectID = "WIM-Ct-dew"; */
+"WIM-Ct-dew.text" = "Data provided by Marvel. © 2014 Marvel";
+
+/* Class = "UILabel"; text = "Icons made by"; ObjectID = "WQZ-Pt-VFL"; */
+"WQZ-Pt-VFL.text" = "Icons made by";
+
+/* Class = "UINavigationItem"; title = "Character List"; ObjectID = "Wlw-pM-bF1"; */
+"Wlw-pM-bF1.title" = "Character List";
+
+/* Class = "UILabel"; text = "No records found."; ObjectID = "X4R-Ul-T2T"; */
+"X4R-Ul-T2T.text" = "No records found.";
+
+/* Class = "UILabel"; text = "No records found."; ObjectID = "YWA-SX-r7R"; */
+"YWA-SX-r7R.text" = "No records found.";
+
+/* Class = "UILabel"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu,"; ObjectID = "YtB-fm-UY3"; */
+"YtB-fm-UY3.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu,";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ZU5-sw-9Ae"; */
+"ZU5-sw-9Ae.text" = "Label";
+
+/* Class = "UILabel"; text = "Comiclink"; ObjectID = "aNL-fr-pRT"; */
+"aNL-fr-pRT.text" = "Comiclink";
+
+/* Class = "UILabel"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu,"; ObjectID = "agA-TY-MMJ"; */
+"agA-TY-MMJ.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu,";
+
+/* Class = "UILabel"; text = "Click here and try again..."; ObjectID = "am4-0x-CuA"; */
+"am4-0x-CuA.text" = "Click here and try again...";
+
+/* Class = "UITableViewSection"; headerTitle = "Related Links"; ObjectID = "aoP-tq-F8b"; */
+"aoP-tq-F8b.headerTitle" = "Related Links";
+
+/* Class = "UITableViewSection"; headerTitle = "Developed by"; ObjectID = "awi-RQ-aAt"; */
+"awi-RQ-aAt.headerTitle" = "Developed by";
+
+/* Class = "UITableViewSection"; headerTitle = "Description"; ObjectID = "bzv-KV-Ws6"; */
+"bzv-KV-Ws6.headerTitle" = "Description";
+
+/* Class = "UILabel"; text = "No records found."; ObjectID = "c6x-ee-e4I"; */
+"c6x-ee-e4I.text" = "No records found.";
+
+/* Class = "UILabel"; text = "Wiki"; ObjectID = "ci7-7I-V7Z"; */
+"ci7-7I-V7Z.text" = "Wiki";
+
+/* Class = "UILabel"; text = "Try again..."; ObjectID = "f5p-wb-AwB"; */
+"f5p-wb-AwB.text" = "Try again...";
+
+/* Class = "UITableViewSection"; headerTitle = "Events"; ObjectID = "mSt-aT-ioZ"; */
+"mSt-aT-ioZ.headerTitle" = "Events";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "mjK-4w-UNe"; */
+"mjK-4w-UNe.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UINavigationItem"; title = "About"; ObjectID = "nZ0-mj-0dj"; */
+"nZ0-mj-0dj.title" = "About";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "s3H-p2-b06"; */
+"s3H-p2-b06.text" = "Title";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "scj-xc-ZJc"; */
+"scj-xc-ZJc.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "www.icons8.com"; ObjectID = "t5L-Xp-sMe"; */
+"t5L-Xp-sMe.normalTitle" = "www.icons8.com";
+
+/* Class = "UILabel"; text = "Try again..."; ObjectID = "u1J-wh-oS8"; */
+"u1J-wh-oS8.text" = "Try again...";
+
+/* Class = "UINavigationItem"; title = "Character Detail"; ObjectID = "uGK-3Y-UNG"; */
+"uGK-3Y-UNG.title" = "Character Detail";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "vhl-MN-POz"; */
+"vhl-MN-POz.text" = "Label";
+
+/* Class = "UILabel"; text = "Data provided by Marvel. © 2014 Marvel"; ObjectID = "xHe-LK-d9X"; */
+"xHe-LK-d9X.text" = "Data provided by Marvel. © 2014 Marvel";
+
+/* Class = "UITableViewSection"; headerTitle = "Acknowledgment"; ObjectID = "y4Y-ri-myi"; */
+"y4Y-ri-myi.headerTitle" = "Acknowledgment";
+
+/* Class = "UILabel"; text = "Click here and try again..."; ObjectID = "yDD-ae-6h3"; */
+"yDD-ae-6h3.text" = "Click here and try again...";
+
+/* Class = "UITableViewSection"; headerTitle = "Comics"; ObjectID = "yuT-fy-6m4"; */
+"yuT-fy-6m4.headerTitle" = "Comics";

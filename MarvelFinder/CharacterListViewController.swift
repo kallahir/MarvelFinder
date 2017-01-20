@@ -33,7 +33,7 @@ class CharacterListViewController: UITableViewController {
             if self.loadErrorFlag {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterListRetryCell", for: indexPath) as! CharacterListRetryCell
                 
-                cell.tryAgainLabel.text = "Click here and try again..."
+                cell.tryAgainLabel.text = NSLocalizedString("Cell.tryAgain", comment: "")
                 
                 return cell
             } else {
@@ -93,7 +93,7 @@ class CharacterListViewController: UITableViewController {
         }
         
         let backItem = UIBarButtonItem()
-        backItem.title = "Back"
+        backItem.title = NSLocalizedString("Navigation.back", comment: "")
         navigationItem.backBarButtonItem = backItem
     }
 
