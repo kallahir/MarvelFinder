@@ -24,6 +24,15 @@ class AboutViewController: UITableViewController {
         if indexPath.section == 1 {
             UIApplication.shared.open(NSURL(string:"https://www.linkedin.com/in/itallorossi") as! URL, options: [:], completionHandler: nil)
         }
+        if indexPath.section == 2 {
+            UIApplication.shared.open(NSURL(string:"itms-apps://itunes.apple.com/app/id1198060663") as! URL, options: [:], completionHandler: nil)
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        if indexPath.section == 2 {
+            UIApplication.shared.open(NSURL(string:"itms-apps://itunes.apple.com/app/id1198060663") as! URL, options: [:], completionHandler: nil)
+        }
     }
     
     @IBAction func openReviconSite(_ sender: Any) {
