@@ -25,7 +25,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="189"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marvelfinder" translatesAutoresizingMaskIntoConstraints="NO" id="YxA-C3-jqs">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marvelfinder" translatesAutoresizingMaskIntoConstraints="NO" id="YxA-C3-jqs">
                                     <rect key="frame" x="137" y="18" width="100" height="100"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="100" id="tP0-kR-q93"/>
@@ -665,7 +665,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xlf-8F-2PP">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder_collection" translatesAutoresizingMaskIntoConstraints="NO" id="Xlf-8F-2PP">
                                                                         <rect key="frame" x="10" y="0.0" width="90" height="128"/>
                                                                     </imageView>
                                                                 </subviews>
@@ -816,7 +816,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4F1-TY-zgQ">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder_collection" translatesAutoresizingMaskIntoConstraints="NO" id="4F1-TY-zgQ">
                                                                         <rect key="frame" x="10" y="0.0" width="90" height="128"/>
                                                                     </imageView>
                                                                 </subviews>
@@ -967,7 +967,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mkD-w2-iTi">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder_collection" translatesAutoresizingMaskIntoConstraints="NO" id="mkD-w2-iTi">
                                                                         <rect key="frame" x="10" y="0.0" width="90" height="128"/>
                                                                     </imageView>
                                                                 </subviews>
@@ -1118,7 +1118,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dMa-4I-VRV">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder_collection" translatesAutoresizingMaskIntoConstraints="NO" id="dMa-4I-VRV">
                                                                         <rect key="frame" x="10" y="0.0" width="90" height="128"/>
                                                                     </imageView>
                                                                 </subviews>
@@ -1344,33 +1344,48 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder_search" translatesAutoresizingMaskIntoConstraints="NO" id="2LB-q0-RHD">
-                                <rect key="frame" x="79" y="93" width="216" height="324"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder_collection_item" translatesAutoresizingMaskIntoConstraints="NO" id="2LB-q0-RHD">
+                                <rect key="frame" x="37" y="7" width="300" height="450"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ipy-Qz-tD7">
-                                <rect key="frame" x="79" y="425" width="216" height="84"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ipy-Qz-tD7">
+                                <rect key="frame" x="37" y="465" width="300" height="63"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="84" id="qi1-Xa-mQ0"/>
+                                    <constraint firstAttribute="height" constant="63" id="EQP-9b-C3C"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="Ee6-75-Bw6">
+                                <rect key="frame" x="37" y="536" width="300" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Wex-0N-4Nr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="linkBackToMarvel:" destination="lu0-Tn-KgH" eventType="touchUpInside" id="hrD-Y4-4Z0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2LB-q0-RHD" firstAttribute="top" secondItem="wE0-ap-tgO" secondAttribute="bottom" constant="93" id="4ku-rm-jdJ"/>
-                            <constraint firstItem="2LB-q0-RHD" firstAttribute="leading" secondItem="oOi-cR-FgK" secondAttribute="leadingMargin" constant="63" id="7aq-pC-s4y"/>
-                            <constraint firstItem="6n2-sw-ieN" firstAttribute="top" secondItem="Ipy-Qz-tD7" secondAttribute="bottom" constant="50" id="IxE-9t-3sD"/>
-                            <constraint firstItem="2LB-q0-RHD" firstAttribute="trailing" secondItem="Ipy-Qz-tD7" secondAttribute="trailing" id="LsN-mc-hNZ"/>
-                            <constraint firstItem="Ipy-Qz-tD7" firstAttribute="top" secondItem="2LB-q0-RHD" secondAttribute="bottom" constant="8" symbolic="YES" id="XgY-Uy-5MP"/>
-                            <constraint firstItem="2LB-q0-RHD" firstAttribute="centerX" secondItem="oOi-cR-FgK" secondAttribute="centerX" id="a8a-3d-6Cv"/>
-                            <constraint firstItem="2LB-q0-RHD" firstAttribute="leading" secondItem="Ipy-Qz-tD7" secondAttribute="leading" id="crq-f3-fzv"/>
+                            <constraint firstItem="Ipy-Qz-tD7" firstAttribute="leading" secondItem="Ee6-75-Bw6" secondAttribute="leading" id="6YQ-J6-G4R"/>
+                            <constraint firstItem="Ipy-Qz-tD7" firstAttribute="top" secondItem="2LB-q0-RHD" secondAttribute="bottom" constant="8" symbolic="YES" id="EE8-UK-FZ1"/>
+                            <constraint firstItem="2LB-q0-RHD" firstAttribute="leading" secondItem="oOi-cR-FgK" secondAttribute="leadingMargin" constant="21" id="KCu-2M-3lu"/>
+                            <constraint firstItem="2LB-q0-RHD" firstAttribute="leading" secondItem="Ipy-Qz-tD7" secondAttribute="leading" id="LfQ-T1-RZ2"/>
+                            <constraint firstItem="2LB-q0-RHD" firstAttribute="centerX" secondItem="oOi-cR-FgK" secondAttribute="centerX" id="TDa-Cu-cBw"/>
+                            <constraint firstItem="2LB-q0-RHD" firstAttribute="top" secondItem="wE0-ap-tgO" secondAttribute="bottom" constant="7" id="UYM-vE-xhd"/>
+                            <constraint firstItem="Ipy-Qz-tD7" firstAttribute="trailing" secondItem="Ee6-75-Bw6" secondAttribute="trailing" id="Xuw-Pd-BfF"/>
+                            <constraint firstItem="2LB-q0-RHD" firstAttribute="trailing" secondItem="Ipy-Qz-tD7" secondAttribute="trailing" id="f14-Xg-nch"/>
+                            <constraint firstItem="Ee6-75-Bw6" firstAttribute="top" secondItem="Ipy-Qz-tD7" secondAttribute="bottom" constant="8" symbolic="YES" id="oeI-N8-WRG"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Ee6-75-Bw6" secondAttribute="bottom" constant="7" id="y5X-gD-BYn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="Thh-75-N0w"/>
                     <connections>
                         <outlet property="collectionImage" destination="2LB-q0-RHD" id="aO2-iw-gqb"/>
+                        <outlet property="collectionLinkButton" destination="Ee6-75-Bw6" id="mNW-e0-Sv8"/>
                         <outlet property="collectionTitle" destination="Ipy-Qz-tD7" id="GyV-eC-ux8"/>
                     </connections>
                 </viewController>
@@ -1394,7 +1409,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                     <rect key="frame" x="0.0" y="0.0" width="342" height="87"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder_search" translatesAutoresizingMaskIntoConstraints="NO" id="32p-Ms-EHH">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder_collection" translatesAutoresizingMaskIntoConstraints="NO" id="32p-Ms-EHH">
                                             <rect key="frame" x="8" y="8" width="54" height="71"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="32p-Ms-EHH" secondAttribute="height" multiplier="54:71" id="1n6-sG-QN5"/>
@@ -1550,12 +1565,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         <image name="info" width="25" height="25"/>
         <image name="linkedin_color" width="96" height="96"/>
         <image name="marvelfinder" width="300" height="300"/>
-        <image name="placeholder_list" width="375" height="180"/>
-        <image name="placeholder_search" width="54" height="71"/>
+        <image name="placeholder_collection" width="100" height="150"/>
+        <image name="placeholder_collection_item" width="450" height="675"/>
+        <image name="placeholder_list" width="696" height="392"/>
         <image name="search" width="25" height="25"/>
         <image name="sync" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="QiK-Sl-h5m"/>
+        <segue reference="j9y-IN-wPb"/>
     </inferredMetricsTieBreakers>
 </document>

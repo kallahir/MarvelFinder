@@ -17,3 +17,8 @@ Search.alert.title = "Invalid Text";
 Search.alert.text  = "Please do not insert emojis or other symbols.";
 
 Detail.noDescription = "Character doesn't have a description.";
+
+comics = "Comics";
+series = "Series";
+stories = "Stories";
+events = "Events";

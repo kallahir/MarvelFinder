@@ -47,7 +47,7 @@ class CharacterListViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterListCell", for: indexPath) as! CharacterListCell
         
-        let urlString = "\(self.result.characters![indexPath.row].thumbnail!)/landscape_xlarge.\(self.result.characters![indexPath.row].thumbFormat!)"
+        let urlString = "\(self.result.characters![indexPath.row].thumbnail!)/landscape_incredible.\(self.result.characters![indexPath.row].thumbFormat!)"
         
         cell.characterImage.af_setImage(withURL: URL(string: urlString)!, placeholderImage: UIImage(named: "placeholder_list"), imageTransition: UIImageView.ImageTransition.crossDissolve(0.3))
         cell.characterName.text = self.result.characters![indexPath.row].name

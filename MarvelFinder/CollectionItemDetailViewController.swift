@@ -13,17 +13,27 @@ class CollectionItemDetailViewController: UIViewController {
     
     @IBOutlet weak var collectionImage: UIImageView!
     @IBOutlet weak var collectionTitle: UILabel!
+    @IBOutlet weak var collectionLinkButton: UIButton!
     
     var collectionItem: CollectionItem!
     var collectionType: String!
     
     override func viewDidLoad() {
-        let urlString = "\(self.collectionItem.thumbnail ?? "nothing")/portrait_fantastic.\(self.collectionItem.thumbFormat ?? "nothing")"
+        let urlString = "\(self.collectionItem.thumbnail ?? "nothing")/portrait_incredible.\(self.collectionItem.thumbFormat ?? "nothing")"
         
-        self.collectionImage.af_setImage(withURL: URL(string: urlString)!, placeholderImage: UIImage(named: "placeholder_search"), imageTransition: UIImageView.ImageTransition.crossDissolve(0.3))
+        self.collectionImage.af_setImage(withURL: URL(string: urlString)!, placeholderImage: UIImage(named: "placeholder_collection_item"), imageTransition: UIImageView.ImageTransition.crossDissolve(0.3))
         self.collectionTitle.text = self.collectionItem.name
         
-        self.navigationItem.title = self.collectionType
+        self.navigationItem.title = NSLocalizedString(self.collectionType, comment: "")
+        
+        let label = self.collectionLinkButton.titleLabel
+        label?.minimumScaleFactor = 0.5
+        label?.adjustsFontSizeToFitWidth = true
+        self.collectionLinkButton.setTitle(NSLocalizedString("Cell.marvelAck", comment: ""), for: .normal)
+    }
+    
+    @IBAction func linkBackToMarvel(_ sender: Any) {
+        UIApplication.shared.open(NSURL(string:"http://www.marvel.com/") as! URL, options: [:], completionHandler: nil)
     }
     
 }

@@ -48,10 +48,10 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let urlString = "\(self.character!.thumbnail!)/landscape_xlarge.\(self.character!.thumbFormat!)"
+        let urlString = "\(self.character!.thumbnail!)/landscape_incredible.\(self.character!.thumbFormat!)"
         
         self.characterName.text = self.character!.name
-        self.characterImage.af_setImage(withURL: URL(string: urlString)!, placeholderImage: UIImage(named: "placeholder_search"), imageTransition: UIImageView.ImageTransition.crossDissolve(0.3))
+        self.characterImage.af_setImage(withURL: URL(string: urlString)!, placeholderImage: UIImage(named: "placeholder_list"), imageTransition: UIImageView.ImageTransition.crossDissolve(0.3))
         
         if (self.character!.description?.isEmpty)! {
             self.characterDescription.text = NSLocalizedString("Detail.noDescription", comment: "")
@@ -151,8 +151,9 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
                 return
             }
             self.selectedCollectionItem = self.comicsCollection.items![indexPath.row]
-            self.selectedCollectionTitle = "Comics"
+            self.selectedCollectionTitle = "comics"
             self.performSegue(withIdentifier: "ShowCollectionItem", sender: self)
+            return
         }
         
         if collectionView == self.seriesCollectionView {
@@ -175,6 +176,10 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
                 }
                 return
             }
+            self.selectedCollectionItem = self.seriesCollection.items![indexPath.row]
+            self.selectedCollectionTitle = "series"
+            self.performSegue(withIdentifier: "ShowCollectionItem", sender: self)
+            return
         }
         
         if collectionView == self.storiesCollectionView {
@@ -197,6 +202,10 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
                 }
                 return
             }
+            self.selectedCollectionItem = self.storiesCollection.items![indexPath.row]
+            self.selectedCollectionTitle = "stories"
+            self.performSegue(withIdentifier: "ShowCollectionItem", sender: self)
+            return
         }
 
         if self.eventsCollection == nil || indexPath.row == self.eventsCollection.items!.count {
@@ -218,6 +227,10 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
             }
             return
         }
+        
+        self.selectedCollectionItem = self.eventsCollection.items![indexPath.row]
+        self.selectedCollectionTitle = "events"
+        self.performSegue(withIdentifier: "ShowCollectionItem", sender: self)
     }
     
     // MARK: Table View
@@ -444,9 +457,9 @@ class CharacterDetailViewController: UITableViewController, UICollectionViewDele
     func collectionCell(collectionView: UICollectionView, indexPath: IndexPath, item: CollectionItem) -> CharacterDetailCollectionCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionCell", for: indexPath) as! CharacterDetailCollectionCell
         
-        let urlString = "\(item.thumbnail ?? "nothing")/portrait_medium.\(item.thumbFormat ?? "nothing")"
+        let urlString = "\(item.thumbnail ?? "nothing")/portrait_xlarge.\(item.thumbFormat ?? "nothing")"
         
-        cell.collectionImage.af_setImage(withURL: URL(string: urlString)!, placeholderImage: UIImage(named: "placeholder_search"), imageTransition: UIImageView.ImageTransition.crossDissolve(0.3))
+        cell.collectionImage.af_setImage(withURL: URL(string: urlString)!, placeholderImage: UIImage(named: "placeholder_collection"), imageTransition: UIImageView.ImageTransition.crossDissolve(0.3))
         cell.collectionName.text = item.name
         
         return cell
