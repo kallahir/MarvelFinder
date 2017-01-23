@@ -42,6 +42,10 @@ class MarvelRequests {
                 let text = String(data: data, encoding: String.Encoding.utf8)
                 let result = SearchResult(JSONString: text!)
 
+                if (result?.statusCode)! >= 300 {
+                    completion(nil)
+                }
+                
                 completion(result!)
             }
         }
@@ -62,6 +66,10 @@ class MarvelRequests {
                 let text = String(data: data, encoding: String.Encoding.utf8)
                 let result = SearchResult(JSONString: text!)
                 
+                if (result?.statusCode)! >= 300 {
+                    completion(nil)
+                }
+                
                 completion(result!)
             }
         }
@@ -81,6 +89,10 @@ class MarvelRequests {
                 
                 let text = String(data: data, encoding: String.Encoding.utf8)
                 let result = Collection(JSONString: text!)
+                
+                if (result?.statusCode)! >= 300 {
+                    completion(nil)
+                }
                 
                 completion(result!)
             }

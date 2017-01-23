@@ -10,6 +10,7 @@ import ObjectMapper
 
 class SearchResult: Mappable {
     
+    var statusCode: Int?
     var offset: Int?
     var limit: Int?
     var total: Int?
@@ -20,6 +21,7 @@ class SearchResult: Mappable {
     }
     
     func mapping(map: Map) {
+        statusCode  <- map["code"]
         offset      <- map["data.offset"]
         limit       <- map["data.limit"]
         total       <- map["data.total"]

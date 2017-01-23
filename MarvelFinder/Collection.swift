@@ -10,6 +10,7 @@ import ObjectMapper
 
 class Collection: Mappable {
     
+    var statusCode: Int?
     var offset: Int?
     var limit: Int?
     var total: Int?
@@ -20,11 +21,12 @@ class Collection: Mappable {
     }
     
     func mapping(map: Map) {
-        offset  <- map["data.offset"]
-        limit   <- map["data.limit"]
-        total   <- map["data.total"]
-        count   <- map["data.count"]
-        items   <- map["data.results"]
+        statusCode  <- map["code"]
+        offset      <- map["data.offset"]
+        limit       <- map["data.limit"]
+        total       <- map["data.total"]
+        count       <- map["data.count"]
+        items       <- map["data.results"]
     }
     
 }
