@@ -22,15 +22,15 @@ class AboutViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.section == 1 {
-            UIApplication.shared.open(NSURL(string:"https://www.linkedin.com/in/itallorossi") as! URL, options: [:], completionHandler: nil)
+            UIApplication.shared.open(NSURL(string:"itms-apps://itunes.apple.com/app/id1198060663") as! URL, options: [:], completionHandler: nil)
         }
         if indexPath.section == 2 {
-            UIApplication.shared.open(NSURL(string:"itms-apps://itunes.apple.com/app/id1198060663") as! URL, options: [:], completionHandler: nil)
+            UIApplication.shared.open(NSURL(string:"https://www.linkedin.com/in/itallorossi") as! URL, options: [:], completionHandler: nil)
         }
     }
     
     override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
-        if indexPath.section == 2 {
+        if indexPath.section == 1 {
             UIApplication.shared.open(NSURL(string:"itms-apps://itunes.apple.com/app/id1198060663") as! URL, options: [:], completionHandler: nil)
         }
     }

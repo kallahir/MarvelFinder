@@ -44,6 +44,7 @@ class MarvelRequests {
 
                 if (result?.statusCode)! >= 300 {
                     completion(nil)
+                    return
                 }
                 
                 completion(result!)
@@ -68,6 +69,7 @@ class MarvelRequests {
                 
                 if (result?.statusCode)! >= 300 {
                     completion(nil)
+                    return
                 }
                 
                 completion(result!)
@@ -92,6 +94,7 @@ class MarvelRequests {
                 
                 if (result?.statusCode)! >= 300 {
                     completion(nil)
+                    return
                 }
                 
                 completion(result!)
