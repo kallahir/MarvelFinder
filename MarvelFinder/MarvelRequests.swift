@@ -123,7 +123,7 @@ class MarvelRequests {
     }
 
     func stopActivity() {
-        UIApplication.shared.isNetworkActivityIndicatorVisible = false? 
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
     
 }
