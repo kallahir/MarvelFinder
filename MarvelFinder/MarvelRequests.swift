@@ -28,6 +28,7 @@ class MarvelRequests {
     }
     
     func getCharacterList(offset: Int, completion: @escaping (_ result: SearchResult?) -> Void) {
+        self.startActivity()
         let ts = Date().timeIntervalSince1970.description.replacingOccurrences(of: ".", with: "")
         let hash = MD5("\(ts)\(self.privateKey)\(self.publicKey)")
         let url = URL(string: "\(self.baseURL)characters?orderBy=name&limit=20&offset=\(offset)&ts=\(ts)&apikey=\(self.publicKey)&hash=\(hash.lowercased())")
@@ -35,6 +36,7 @@ class MarvelRequests {
         DispatchQueue.main.async {
             self.getDataFromUrl(url: url!) { (data, response, error) in
                 guard let data = data, error == nil else {
+                    self.stopActivity()
                     completion(nil)
                     return
                 }
@@ -47,12 +49,14 @@ class MarvelRequests {
                     return
                 }
                 
+                self.stopActivity()
                 completion(result!)
             }
         }
     }
     
     func searchCharacter(name: String, offset: Int, completion: @escaping (_ result: SearchResult?) -> Void) {
+        self.startActivity()
         let ts = Date().timeIntervalSince1970.description.replacingOccurrences(of: ".", with: "")
         let hash = MD5("\(ts)\(self.privateKey)\(self.publicKey)")
         let url = URL(string: "\(self.baseURL)characters?nameStartsWith=\(name)&orderBy=name&limit=10&offset=\(offset)&ts=\(ts)&apikey=\(self.publicKey)&hash=\(hash.lowercased())")
@@ -60,6 +64,7 @@ class MarvelRequests {
         DispatchQueue.main.async {
             self.getDataFromUrl(url: url!) { (data, response, error) in
                 guard let data = data, error == nil else {
+                    self.stopActivity()
                     completion(nil)
                     return
                 }
@@ -72,12 +77,14 @@ class MarvelRequests {
                     return
                 }
                 
+                self.stopActivity()
                 completion(result!)
             }
         }
     }
     
     func getCollectionList(characterId: Int, collectionType: String, offset: Int, completion: @escaping (_ result: Collection?) -> Void) {
+        self.startActivity()
         let ts = Date().timeIntervalSince1970.description.replacingOccurrences(of: ".", with: "")
         let hash = MD5("\(ts)\(self.privateKey)\(self.publicKey)")
         let url = URL(string: "\(self.baseURL)characters/\(characterId)/\(collectionType)?limit=20&offset=\(offset)&ts=\(ts)&apikey=\(self.publicKey)&hash=\(hash.lowercased())")
@@ -85,6 +92,7 @@ class MarvelRequests {
         DispatchQueue.main.async {
             self.getDataFromUrl(url: url!) { (data, response, error) in
                 guard let data = data, error == nil else {
+                    self.stopActivity()
                     completion(nil)
                     return
                 }
@@ -97,6 +105,7 @@ class MarvelRequests {
                     return
                 }
                 
+                self.stopActivity()
                 completion(result!)
             }
         }
@@ -107,6 +116,14 @@ class MarvelRequests {
             (data, response, error) in
             completion(data, response, error)
             }.resume()
+    }
+    
+    func startActivity() {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+    }
+
+    func stopActivity() {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false? 
     }
     
 }
